@@ -32,44 +32,42 @@ export default class PizzaTranslator extends Component {
       // need at least 40 to prevent text from hidding top of phone in simulator
       <View style={{padding: this.nPadding}}>
         <TextInput
-          style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
-          placeholder="Bib Color"
-          onChangeText={(bibCol) => this.setState({bibCol})}
+        style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
+        placeholder="Bib Color"
+        onChangeText={(bibCol) => this.setState({bibCol})}
         />
         <TextInput 
         style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
         placeholder="Bib #"
-          onChangeText={(bibNum) => this.setState({bibNum})}
+        onChangeText={(bibNum) => this.setState({bibNum})}
         />
         <TextInput 
         style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
         placeholder="Heat #"
-          onChangeText={(heatNum) => this.setState({heatNum})}
+        onChangeText={(heatNum) => this.setState({heatNum})}
         />
         <TextInput 
         style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
         placeholder="Lane #"
-          onChangeText={(laneNum) => this.setState({laneNum})}
+        onChangeText={(laneNum) => this.setState({laneNum})}
         />
         <TextInput 
-          style={{height: this.nHeight}}
-          placeholder="Gender"
-          onChangeText={(gender) => this.setState({gender})}
+        style={{height: this.nHeight, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
+        placeholder="Gender"
+        onChangeText={(gender) => this.setState({gender})}
         />
-        
+
         <Text style={{padding: 10, fontSize: 42}}>
           {this.state.bibCol.split(' ').map((word) => word && '🍕').join(' ')}
         </Text>
 
         <Button
-          style={{fontSize: 20, color: 'green'}}
-          styleDisabled={{color: 'red'}}
-          onPress={() => this._handlePress()}>
-          Press Me!
-      </Button>
+          containerStyle={{padding:10, height:45, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+          style={{fontSize: 20, color: 'white'}}>
+          Submit
+        </Button>
+
       </View>
-
-
     );
   }
 }
