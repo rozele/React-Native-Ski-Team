@@ -69,7 +69,7 @@ export default class PizzaTranslator extends Component {
         options= {this.sGenderOptions}
         textStyle={{fontSize: 20}}
         style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:40}}        
-        dropdownTextStyle= {{fontSize: 20, fontColor: 'black'}} 
+        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
         />
 
         <Button          
