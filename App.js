@@ -36,32 +36,46 @@ export default class PizzaTranslator extends Component {
     
   }
   
-  
+  // Test dummy func
+  getMoviesFromApiAsync() {
+    return fetch('https://facebook.github.io/react-native/movies.json')
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson.movies)
+        return responseJson.movies;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }
+
+
   /** Event handlers for button and modals
    * ------------------------------------ */
   _handleBtnPress() {
     // TODO: POST content from input fields to DB
     console.log('Pressed!');
+    this.getMoviesFromApiAsync();
   }
 
   _handleGenderSelect(idx, value){
     this.state.gender = value;
-    console.log('Gender selected' + this.state.gender);
+    console.log('Gender selected ' + this.state.gender);
   }
 
   _handleLaneSelect(idx, value){
     this.state.laneNum = value;
-    console.log('Lane selected' + this.state.laneNum);
+    console.log('Lane selected ' + this.state.laneNum);
   }
 
   _handleHeatSelect(idx, value){
     this.state.heatNum = value;
-    console.log('Lane selected' + this.state.heatNum);
+    console.log('Lane selected ' + this.state.heatNum);
   }
 
   _handleBibSelect(idx, value){
     this.state.bibCol = value;
-    console.log('Lane selected' + this.state.bibCol);
+    console.log('Lane selected ' + this.state.bibCol);
   }
 
   render() {
