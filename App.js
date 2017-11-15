@@ -30,8 +30,9 @@ export default class PizzaTranslator extends Component {
     console.log('Pressed!');
   }
 
-  _handleGenderSelect(gender){
-    console.log('Gender Selected');
+  _handleGenderSelect(idx, value){
+    this.state.gender = value;
+    console.log('Gender selected' + this.state.gender);
   }
 
   render() {
@@ -58,14 +59,9 @@ export default class PizzaTranslator extends Component {
         placeholder="Lane #"
         onChangeText={(laneNum) => this.setState({laneNum})}
         />
-        <TextInput 
-        style={{height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
-        placeholder="Gender"
-        onChangeText={(gender) => this.setState({gender})}
-        />
 
         <ModalDropdown
-        onSelect={this._handleGenderSelect()}
+        onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
         options= {this.sGenderOptions}
         textStyle={{fontSize: 20}}
         style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:40}}        
