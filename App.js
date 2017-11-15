@@ -3,6 +3,8 @@ import {AppRegistry, Text, TextInput, View, ScrollView} from 'react-native'     
 import Button                                           from 'react-native-button'        ;
 import ModalDropdown                                    from 'react-native-modal-dropdown';
 
+var dbApp = require("./sportstracker_dbsetup/app");
+
 //TODO: Rename this class
 export default class PizzaTranslator extends Component {
   constructor(props) {
@@ -55,7 +57,7 @@ export default class PizzaTranslator extends Component {
   _handleBtnPress() {
     // TODO: POST content from input fields to DB
     console.log('Pressed!');
-    this.getMoviesFromApiAsync();
+    // this.getMoviesFromApiAsync();
   }
 
   _handleGenderSelect(idx, value){
