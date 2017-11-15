@@ -15,7 +15,8 @@ export default class PizzaTranslator extends Component {
       gender : "Gender" 
     };
 
-    this.sGenderOptions = ['Male', 'Female'];
+    this.aGenderOptions = ['Male', 'Female'];
+    this.aLaneOptions   = [1,2,3,4,5,6     ];
 
     this.nHeight     = 80;
     this.nPadding    = 40;
@@ -33,6 +34,11 @@ export default class PizzaTranslator extends Component {
   _handleGenderSelect(idx, value){
     this.state.gender = value;
     console.log('Gender selected' + this.state.gender);
+  }
+
+  _handleLaneSelect(idx, value){
+    this.state.laneNum = value;
+    console.log('Lane selected' + this.state.laneNum);
   }
 
   render() {
@@ -60,11 +66,23 @@ export default class PizzaTranslator extends Component {
         onChangeText={(laneNum) => this.setState({laneNum})}
         />
 
+
+
         <ModalDropdown
+        defaultValue="Lane #"
+        onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
+        options= {this.aLaneOptions}
+        textStyle={{fontSize: this.nFontSize}}
+        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
+        />
+
+        <ModalDropdown
+        defaultValue="Gender"
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
-        options= {this.sGenderOptions}
-        textStyle={{fontSize: 20}}
-        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:40}}        
+        options= {this.aGenderOptions}
+        textStyle={{fontSize: this.nFontSize}}
+        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
         />
 
