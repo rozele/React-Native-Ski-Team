@@ -17,9 +17,9 @@ export default class PizzaTranslator extends Component {
 
     // Modal options
     this.aGenderOptions = ['Male', 'Female'];
-    this.aLaneOptions   = [1,2,3,4,5,6     ];
     this.aHeatOptions   = [1,2,3,4         ];
-    this.aBibOptions    = ['Red', 'Blue', 'Green', 'Purple, Orange', 'Yellow', 'Black' ];
+    this.aLaneOptions   = [1,2,3,4,5,6     ];
+    this.aBibOptions    = ['Red', 'Green', 'Blue', 'Purple, Orange', 'Yellow', 'Black' ];
 
     // Display props
     this.nHeight        = 80;
@@ -27,13 +27,15 @@ export default class PizzaTranslator extends Component {
     this.nFontSize      = 50;
     this.nMargin        = 15;
     this.nBorderWidth   = 1;
-    this.nModalFontSize = 30;
+    this.nModalPadding  = 10;
+    this.nModalMargin   = 20;
+    this.nModalFontSize = 20;
     this.sBorderColor   = 'black';
   }
   
   /** Event handlers for button and modals
    * ------------------------------------ */
-  _handlePBtnPress() {
+  _handleBtnPress() {
     // TODO: POST content from input fields to DB
     console.log('Pressed!');
   }
@@ -74,6 +76,7 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleBibSelect(idx, value)}
         options= {this.aBibOptions}
         textStyle={{fontSize: this.nFontSize}}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}                
         style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
@@ -82,6 +85,7 @@ export default class PizzaTranslator extends Component {
         defaultValue="Heat #"
         onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
         options= {this.aHeatOptions}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 200}}
         textStyle={{fontSize: this.nFontSize}}
         style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
@@ -91,6 +95,7 @@ export default class PizzaTranslator extends Component {
         defaultValue="Lane #"
         onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
         options= {this.aLaneOptions}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
         textStyle={{fontSize: this.nFontSize}}
         style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
@@ -101,7 +106,8 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
         options= {this.aGenderOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
         dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
 
