@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View} from 'react-native';
+import {AppRegistry, Text, TextInput, View} from 'react-native';
 import Button from 'react-native-button';
+import ModalDropdown from 'react-native-modal-dropdown';
 
 export default class PizzaTranslator extends Component {
   constructor(props) {
@@ -14,6 +15,8 @@ export default class PizzaTranslator extends Component {
       gender : "Gender" 
     };
 
+    this.sGenderOptions = ['Male', 'Female'];
+
     this.nHeight     = 80;
     this.nPadding    = 40;
     this.nFontSize   = 50;
@@ -22,9 +25,13 @@ export default class PizzaTranslator extends Component {
     this.borderColor = 'black';
   }
   
-  _handlePress() {
+  _handlePBtnPress() {
     // TODO: POST content from input fields to DB
     console.log('Pressed!');
+  }
+
+  _handleGenderSelect(gender){
+    console.log('Gender Selected');
   }
 
   render() {
@@ -57,15 +64,25 @@ export default class PizzaTranslator extends Component {
         onChangeText={(gender) => this.setState({gender})}
         />
 
+        <ModalDropdown
+        onSelect={this._handleGenderSelect()}
+        options= {this.sGenderOptions}
+        textStyle={{fontSize: 20}}
+        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:40}}        
+        dropdownTextStyle= {{fontSize: 20, fontColor: 'black'}} 
+        />
+
         <Button          
-        containerStyle={{padding:10, height:45, margin: 80, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+        containerStyle={{padding:10, height:45, margin: 60, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
         style={{fontSize: 24, color: 'white'}}
-        onPress={() => this._handlePress()} >
+        onPress={() => this._handleBtnPress()} >
         Submit
         </Button>
 
       </View>
     );
+
+
   }
 }
 

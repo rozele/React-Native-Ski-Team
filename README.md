@@ -4,9 +4,10 @@
 
 ### Instructions
 
-1. Install button package
+1. Install required packages
 ```
 install react-native-button --save.
+npm i react-native-modal-dropdown -S
 ```
 
 2. ```
