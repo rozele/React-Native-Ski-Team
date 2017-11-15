@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, TextInput, View } from 'react-native';
+import { AppRegistry, Text, TextInput, View} from 'react-native';
+import Button from 'react-native-button';
 
 export default class PizzaTranslator extends Component {
   constructor(props) {
     super(props);
+
     this.state = {
       bibCol : "Bib Color",
       bibNum : "Bib #"    ,
@@ -12,13 +14,18 @@ export default class PizzaTranslator extends Component {
       gender : "Gender" 
     };
 
-    this.nHeight   = 80;
-    this.nPadding  = 40;
-    this.nFontSize = 50;
+    this.nHeight     = 80;
+    this.nPadding    = 40;
+    this.nFontSize   = 50;
     this.borderWidth = 1;
     this.borderColor = 'black';
   }
   
+  _handlePress() {
+    // TODO: POST content from input fields to DB
+    console.log('Pressed!');
+  }
+
 
   render() {
     return (
@@ -49,10 +56,20 @@ export default class PizzaTranslator extends Component {
           placeholder="Gender"
           onChangeText={(gender) => this.setState({gender})}
         />
+        
         <Text style={{padding: 10, fontSize: 42}}>
           {this.state.bibCol.split(' ').map((word) => word && '🍕').join(' ')}
         </Text>
+
+        <Button
+          style={{fontSize: 20, color: 'green'}}
+          styleDisabled={{color: 'red'}}
+          onPress={() => this._handlePress()}>
+          Press Me!
+      </Button>
       </View>
+
+
     );
   }
 }
