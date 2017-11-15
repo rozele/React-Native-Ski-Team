@@ -15,17 +15,20 @@ export default class PizzaTranslator extends Component {
       gender : "Gender" 
     };
 
+    // Modal options
     this.aGenderOptions = ['Male', 'Female'];
     this.aLaneOptions   = [1,2,3,4,5,6     ];
     this.aHeatOptions   = [1,2,3,4         ];
     this.aBibOptions    = ['Red', 'Blue', 'Green', 'Purple, Orange', 'Yellow', 'Black' ];
 
-    this.nHeight     = 80;
-    this.nPadding    = 40;
-    this.nFontSize   = 50;
-    this.nMargin     = 15;
-    this.borderWidth = 1;
-    this.borderColor = 'black';
+    // Display props
+    this.nHeight        = 80;
+    this.nPadding       = 40;
+    this.nFontSize      = 50;
+    this.nMargin        = 15;
+    this.nBorderWidth   = 1;
+    this.nModalFontSize = 30;
+    this.sBorderColor   = 'black';
   }
   
   /** Event handlers for button and modals
@@ -61,7 +64,7 @@ export default class PizzaTranslator extends Component {
       <View style={{padding: this.nPadding}}>
               
         <TextInput 
-        style={{height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
+        style={{height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
         placeholder="Bib #"
         onChangeText={(bibNum) => this.setState({bibNum})}
         />
@@ -71,8 +74,8 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleBibSelect(idx, value)}
         options= {this.aBibOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
   
         <ModalDropdown
@@ -80,8 +83,8 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
         options= {this.aHeatOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
 
         <ModalDropdown
@@ -89,8 +92,8 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
         options= {this.aLaneOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
 
         <ModalDropdown
@@ -98,8 +101,8 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
         options= {this.aGenderOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
 
         <Button          
