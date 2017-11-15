@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import {AppRegistry, Text, TextInput, View, ScrollView} from 'react-native';
-import Button from 'react-native-button';
-import ModalDropdown from 'react-native-modal-dropdown';
+import React, { Component }                             from 'react'                      ;
+import {AppRegistry, Text, TextInput, View, ScrollView} from 'react-native'               ;
+import Button                                           from 'react-native-button'        ;
+import ModalDropdown                                    from 'react-native-modal-dropdown';
 
+//TODO: Rename this class
 export default class PizzaTranslator extends Component {
   constructor(props) {
     super(props);
@@ -62,13 +63,11 @@ export default class PizzaTranslator extends Component {
     this.state.bibCol = value;
     console.log('Lane selected' + this.state.bibCol);
   }
-  
 
   render() {
     return (
-      // need at least 40 to prevent text from hidding top of phone in simulator
+      // NOTE: Need margin of at least 40 to prevent text from hidding top of phone in simulator when in portrait
       <ScrollView>
-
               
         <TextInput 
         style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
