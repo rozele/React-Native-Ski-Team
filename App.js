@@ -17,6 +17,7 @@ export default class PizzaTranslator extends Component {
 
     this.aGenderOptions = ['Male', 'Female'];
     this.aLaneOptions   = [1,2,3,4,5,6     ];
+    this.aHeatOptions   = [1,2,3,4         ];
 
     this.nHeight     = 80;
     this.nPadding    = 40;
@@ -41,6 +42,11 @@ export default class PizzaTranslator extends Component {
     console.log('Lane selected' + this.state.laneNum);
   }
 
+  _handleHeatSelect(idx, value){
+    this.state.heatNum = value;
+    console.log('Lane selected' + this.state.heatNum);
+  }
+
   render() {
     return (
       // need at least 40 to prevent text from hidding top of phone in simulator
@@ -55,25 +61,22 @@ export default class PizzaTranslator extends Component {
         placeholder="Bib #"
         onChangeText={(bibNum) => this.setState({bibNum})}
         />
-        <TextInput 
-        style={{height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
-        placeholder="Heat #"
-        onChangeText={(heatNum) => this.setState({heatNum})}
+  
+        <ModalDropdown
+        defaultValue="Heat #"
+        onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
+        options= {this.aHeatOptions}
+        textStyle={{fontSize: this.nFontSize}}
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
         />
-        <TextInput 
-        style={{height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.borderColor, borderWidth: this.borderWidth}}
-        placeholder="Lane #"
-        onChangeText={(laneNum) => this.setState({laneNum})}
-        />
-
-
 
         <ModalDropdown
         defaultValue="Lane #"
         onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
         options= {this.aLaneOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
         />
 
@@ -82,7 +85,7 @@ export default class PizzaTranslator extends Component {
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
         options= {this.aGenderOptions}
         textStyle={{fontSize: this.nFontSize}}
-        style={{borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
+        style={{margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.borderColor, borderWidth: this.borderWidth, padding:10, height:this.nHeight}}        
         dropdownTextStyle= {{fontSize: 20, color: 'black'}} 
         />
 
