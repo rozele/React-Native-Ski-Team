@@ -22,8 +22,8 @@ export default class PizzaTranslator extends Component {
     this.aBibOptions    = ['Red', 'Green', 'Blue', 'Purple, Orange', 'Yellow', 'Black' ];
 
     // Display props
-    this.nHeight        = 40;
-    this.nPadding       = 20;
+    this.nHeight        = 35;
+    this.nPadding       = 15;
     this.nFontSize      = 20;
     this.nMargin        = 15;
     this.nBorderWidth   = 1;
@@ -117,7 +117,7 @@ export default class PizzaTranslator extends Component {
         />
 
         <Button          
-        containerStyle={{padding:10, height:45, margin: 60, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+        containerStyle={{width:this.nModalWidth, height:40, margin: 0, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
         style={{fontSize: 24, color: 'white'}}
         onPress={() => this._handleBtnPress()} >
         Submit
