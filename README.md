@@ -1,11 +1,8 @@
 
 ### Dave Voyles
 
-
 ### Instructions
-1. ```
-npm start
-```
+1. ``` npm start ```
 
 --------------
 

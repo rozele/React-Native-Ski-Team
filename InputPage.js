@@ -3,8 +3,6 @@ import {AppRegistry, Text, TextInput, View, ScrollView} from 'react-native'     
 import Button                                           from 'react-native-button'        ;
 import ModalDropdown                                    from 'react-native-modal-dropdown';
 
-// var dbApp = require("./dbApp");
-
 //TODO: Rename this class
 export default class InputPage extends Component {
   constructor(props) {
