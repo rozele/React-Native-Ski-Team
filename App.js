@@ -3,8 +3,10 @@ import InputPage                        from './InputPage'     ;
 import ScreenOne                        from './ScreenOne'     ;
 import ScreenTwo                        from './ScreenTwo'     ;
 import ScreenThree                      from './ScreenThree'   ;
+import DemoGallery                      from './DemoGallery'   ;
 
 const App = TabNavigator({
+    DemoGallery: {screen: DemoGallery},
     Home       : { screen: InputPage   },
     ScreenOne  : { screen: ScreenOne   },
     ScreenTwo  : { screen: ScreenTwo   },
