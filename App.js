@@ -7,11 +7,11 @@ import DemoGallery                      from './DemoGallery'   ;
 import ImageCapture                     from './ImageCapture'  ;
 
 const App = TabNavigator({
-    DemoGallery: {screen: DemoGallery},
-    Home       : { screen: InputPage   },
-    ScreenOne  : { screen: ScreenOne   },
-    ScreenTwo  : { screen: ImageCapture   },
-    ScreenThree: { screen: ScreenThree }
+    DemoGallery  : {screen: DemoGallery  },
+    Home         : { screen: InputPage   },
+    ScreenOne    : { screen: ScreenOne   },
+    ImageCapture : { screen: ImageCapture},
+    ScreenThree  : { screen: ScreenThree }
   }, {
     tabBarOptions: { 
       activeTintColor: '#7567B1',

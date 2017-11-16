@@ -6,12 +6,23 @@ import {
   StyleSheet,
   Text,
   TouchableHighlight,
-  View
+  View,
+  Image
 } from 'react-native';
 import Camera from 'react-native-camera';
 
 export default class ImageCapture extends Component {
+  static navigationOptions = {
+    tabBarLabel: 'ImageCapture',
+    tabBarIcon: ({ tintColor }) => (
+      <Image
+        source={require('../React-Native-Ski-Team/images/chat-icon.png')}
+        style={[styles.icon, { tintColor: tintColor }]}
+      />
+    )
+  }
   render() {
+    const { navigate } = this.props.navigation;
     return (
       <View style={styles.container}>
         <Camera
