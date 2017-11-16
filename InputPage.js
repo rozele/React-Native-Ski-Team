@@ -37,7 +37,8 @@ export default class InputPage extends Component {
   
   // Test dummy func
   getMoviesFromApiAsync() {
-    return fetch('https://facebook.github.io/react-native/movies.json')
+    // return fetch('https://facebook.github.io/react-native/movies.json')
+     return fetch('https://sporttrackingdataloggingfunction.azurewebsites.net/api/HttpTriggerJS1?code=GLkzGlv7iRaga6UypZfEYBCuZIzpsFsOJw3opUmxPkrDZrsdsrzqFg==')
       .then((response) => response.json())
       .then((responseJson) => {
         console.log(responseJson.movies)
@@ -48,13 +49,26 @@ export default class InputPage extends Component {
       });
   }
 
+  /**
+   * Posts this.state to Azure Func */
+  postDataToAzureAsync() {
+    fetch('https://sporttrackingdataloggingfunction.azurewebsites.net/api/HttpTriggerJS1?code=GLkzGlv7iRaga6UypZfEYBCuZIzpsFsOJw3opUmxPkrDZrsdsrzqFg==', {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(this.state)
+    }).then(res=>res.json())
+      .then(res => console.log(res));
+  }
+
 
   /** Event handlers for button and modals
    * ------------------------------------ */
   _handleBtnPress() {
-    // TODO: POST content from input fields to DB
     console.log('Pressed!');
-    // this.getMoviesFromApiAsync();
+    this.getMoviesFromApiAsync();
   }
 
   _handleGenderSelect(idx, value){

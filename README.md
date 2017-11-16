@@ -4,6 +4,10 @@
 ### Instructions
 1. ``` npm start ```
 
+
+### Hiding Warnings on iOS
+See this [Stack Overflow Post](https://stackoverflow.com/questions/44081674/react-native-connection-has-no-connection-handler-error-meaning)
+
 --------------
 
 
