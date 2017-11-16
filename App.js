@@ -1,20 +1,13 @@
-import { StackNavigator, TabNavigator }       from 'react-navigation' ;
-import InputPage                              from './InputPage'      ;
-
-import ScreenOne   from './ScreenOne';
-import ScreenTwo   from './ScreenTwo';
-import ScreenThree from './ScreenThree';
-
-// const App = StackNavigator({
-//     //  Home:        { screen: InputPage   },
-//      ScreenOne:   { screen: ScreenOne   },
-//      ScreenTwo:   { screen: ScreenTwo   },
-//      ScreenThree: { screen: ScreenThree }
-// })
+import { StackNavigator, TabNavigator } from 'react-navigation';
+import InputPage                        from './InputPage'     ;
+import ScreenOne                        from './ScreenOne'     ;
+import ScreenTwo                        from './ScreenTwo'     ;
+import ScreenThree                      from './ScreenThree'   ;
 
 const App = TabNavigator({
-    ScreenOne: { screen: ScreenOne },
-    ScreenTwo: { screen: ScreenTwo },
+    Home       : { screen: InputPage   },
+    ScreenOne  : { screen: ScreenOne   },
+    ScreenTwo  : { screen: ScreenTwo   },
     ScreenThree: { screen: ScreenThree }
   }, {
     tabBarOptions: { 

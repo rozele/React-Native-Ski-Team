@@ -133,9 +133,11 @@ export default class InputPage extends Component {
         style={{fontSize: 24, color: 'white'}}
         onPress={() => this._handleBtnPress()} >
         Submit
-        </Button>
+        </Button>        
         </ScrollView>
     );
+
+    
   }
 }
 // skip this line if using Create React Native App
