@@ -12,11 +12,7 @@ export default class DemoGallery extends Component {
                 {
                     caption: 'This image is bundled with the app, so you must provide dimensions for it',
                     source: require('./images/broadchurch_thumbnail.png'),
-                    dimensions: { width: 540, height: 720 }
-                },
-                {
-                    caption: 'This image has a broken URL',
-                    source: { uri: 'https://pbs.twimg.com/profile_images/686613263811907584/Ni3AWru_.png' }
+                    dimensions: { width: 400, height: 50 }
                 },
                 {
                     caption: 'Remote image with supplied dimensions',
@@ -25,14 +21,6 @@ export default class DemoGallery extends Component {
                 },
                 { caption: 'Caption 4', source: { uri: 'http://i.imgur.com/XP2BE7q.jpg' } },
                 { caption: 'Caption 5', source: { uri: 'http://i.imgur.com/5nltiUd.jpg' } },
-                { caption: 'Caption 6', source: { uri: 'http://i.imgur.com/6vOahbP.jpg' } },
-                { caption: 'Caption 7', source: { uri: 'http://i.imgur.com/kj5VXtG.jpg' } },
-                { caption: 'Caption 8', source: { uri: 'http://i.imgur.com/BN8RVGa.jpg' } },
-                { caption: 'Caption 9', source: { uri: 'http://i.imgur.com/jXbhTbv.jpg' } },
-                { caption: 'Caption 10', source: { uri: 'http://i.imgur.com/30s12Qj.jpg' } },
-                { caption: 'Caption 11', source: { uri: 'http://i.imgur.com/4A1Q49y.jpg' } },
-                { caption: 'Caption 12', source: { uri: 'http://i.imgur.com/JfVDTF9.jpg' } },
-                { caption: 'Caption 13', source: { uri: 'http://i.imgur.com/Vv4bmwR.jpg' } }
             ]
         };
         this.onChangeImage = this.onChangeImage.bind(this);
@@ -80,7 +68,6 @@ export default class DemoGallery extends Component {
         return (
             <View style={{ flex: 1, backgroundColor: 'black', alignItems: 'center', justifyContent: 'center' }}>
                  <Text style={{ color: 'white', fontSize: 15, fontStyle: 'italic' }}>This image cannot be displayed...</Text>
-                 <Text style={{ color: 'white', fontSize: 15, fontStyle: 'italic' }}>... but this is fine :)</Text>
             </View>
         );
     }
