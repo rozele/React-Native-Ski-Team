@@ -140,4 +140,4 @@ export default class InputPage extends Component {
   }
 }
 // skip this line if using Create React Native App
-AppRegistry.registerComponent('AwesomeProject', () => InputPage);
+AppRegistry.registerComponent('SkiApp', () => InputPage);

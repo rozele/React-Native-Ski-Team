@@ -67,4 +67,4 @@ const style = {
   }
 };
 
-AppRegistry.registerComponent('AwesomeProject', () => Cam);
+AppRegistry.registerComponent('SkiApp', () => Cam);
