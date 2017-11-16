@@ -4,12 +4,13 @@ import ScreenOne                        from './ScreenOne'     ;
 import ScreenTwo                        from './ScreenTwo'     ;
 import ScreenThree                      from './ScreenThree'   ;
 import DemoGallery                      from './DemoGallery'   ;
+import ImageCapture                     from './ImageCapture'  ;
 
 const App = TabNavigator({
     DemoGallery: {screen: DemoGallery},
     Home       : { screen: InputPage   },
     ScreenOne  : { screen: ScreenOne   },
-    ScreenTwo  : { screen: ScreenTwo   },
+    ScreenTwo  : { screen: ImageCapture   },
     ScreenThree: { screen: ScreenThree }
   }, {
     tabBarOptions: { 
