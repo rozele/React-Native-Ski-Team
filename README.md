@@ -2,11 +2,15 @@
 ### Dave Voyles
 
 ### Instructions
-1. ``` npm start ```
+1. ``` npm install ```
+2. Follow [instructions here](https://github.com/lwansbrough/react-native-camera) to allow for camera use on iOS / Android.
 
 
 ### Hiding Warnings on iOS
 See this [Stack Overflow Post](https://stackoverflow.com/questions/44081674/react-native-connection-has-no-connection-handler-error-meaning)
+
+
+
 
 --------------
 
