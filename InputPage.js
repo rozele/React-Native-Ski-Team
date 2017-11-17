@@ -10,26 +10,22 @@ export default class InputPage extends Component {
       this.state = {
       phaseID: '0'       ,
       heatNum: '0'       ,
-      sport  : 'sport'   ,
-      event  : 'event'   ,
-      temp   : 'temp'    ,
-      precip : 'precip'  ,
-      gender : 'gender'
+      sport  : 'default' ,
+      event  : 'default' ,
+      temp   : 'default' ,
+      precip : 'default' ,
+      gender : 'default' ,
+      bibCol : 'default' ,
     };
 
     // Modal options
-    this.sportOpt  = ['Snowboarding', 'Skiing'];
-    this.eventOpt  = ['Snowboarding', 'Skiing'];
-    this.precipOpt = ['None'                  ];
-    this.genderOpt = ['Men', 'Women'          ];
-    this.heatOpt   = [1,2,3,4                 ];
-    this.laneOpt   = [1,2,3,4,5,6             ];
-
-    // Modal options
-    this.aGenderOptions = ['Male', 'Female'];
-    this.aHeatOptions   = [1,2,3,4         ];
-    this.aLaneOptions   = [1,2,3,4,5,6     ];
-    this.aBibOptions    = ['Red', 'Green', 'Blue', 'Purple, Orange', 'Yellow', 'Black' ];
+    this.sportOpt  = ['Snowboarding', 'Skiing'                                    ];
+    this.eventOpt  = ['Snowboarding', 'Skiing'                                    ];
+    this.precipOpt = ['None'                                                      ];
+    this.genderOpt = ['Men', 'Women'                                              ];
+    this.heatOpt   = [1,2,3,4                                                     ];
+    this.laneOpt   = [1,2,3,4,5,6                                                 ];
+    this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple, Orange', 'Yellow', 'Black' ];
 
     // Display props
     this.nHeight        = 35;
@@ -43,7 +39,9 @@ export default class InputPage extends Component {
     this.nModalFontSize = 20;
     this.sBorderColor   = 'black';
     
-    this.sAzureUrl      = "http://sportstrackinglogger.azurewebsites.net/?";
+    // NOTE: fetch on iOS ONLY accepts https requests.
+    // See : https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
+    this.sAzureUrl      = "https://sportstrackinglogger.azurewebsites.net/?";
     this.sDemoUrlParams = "raceCodex=R1115&phaseID=Heat1&sport=snowboarding&event=SBX&temp=0&precip=None&gender=Female";
   }
   
@@ -53,7 +51,7 @@ export default class InputPage extends Component {
   createUrlToPost() {
     var myString = '';
     for (var key in this.state) {
-      // Get values
+      // Get values in this.state object
       if (this.state.hasOwnProperty(key)) {
          var obj = this.state[key];
          // Build the string for param urls
@@ -71,37 +69,39 @@ export default class InputPage extends Component {
       return newString;
    }
 
-
   /** 
    * Is actually a GET operation, as that is what Azure Functions accept to post data 
    */
-  postDataToAzureAsync() {
-    return fetch(this.sAzureUrl +this.createUrlToPost)
-    .then((response) => response.json())
-    .then((responseJson) => {
-      console.log(responseJson.movies)
-      return responseJson.movies;
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-  }
+  postDataToAzureFuncAsync() {
+    var _sAzureFuncParams = this.createUrlToPost()
+    var _sAzureUrl        = this.sAzureUrl + _sAzureFuncParams;
+
+    return fetch(_sAzureUrl)
+      .then((response) => response.json())
+      .then((responseJson) => {
+        console.log(responseJson)
+        return responseJson;
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  }   
 
   /**
    * Post func using Fetch
    * NOT USED
    */
-  // postDataToAzureAsync() {
-  //   fetch(this.sAzureUrl + this.state, {
-  //     method: 'post',
-  //     headers: {
-  //       'Accept': 'application/json, text/plain, */*',
-  //       'Content-Type': 'application/json'
-  //     },
-  //     // body: JSON.stringify(this.state)
-  //   }).then(res=>res.json())
-  //     .then(res => console.log(res));
-  // }
+  postDataToAzureAsync() {
+    fetch(this.sAzureUrl + this.state, {
+      method: 'post',
+      headers: {
+        'Accept': 'application/json, text/plain, */*',
+        'Content-Type': 'application/json'
+      },
+      // body: JSON.stringify(this.state)
+    }).then(res=>res.json())
+      .then(res => console.log(res));
+  }
 
     // Test dummy func - sanity check to verify Fetch is working
     getMoviesFromApiAsync() {
@@ -119,9 +119,7 @@ export default class InputPage extends Component {
   /** Event handlers for button and modals
    * ------------------------------------ */
   _handleBtnPress() {
-    console.log('Pressed!');
-    // this.getMoviesFromApiAsync();
-    this.createUrlToPost();
+    this.postDataToAzureFuncAsync();
   }
 
   _handleGenderSelect(idx, value){
@@ -237,6 +235,16 @@ export default class InputPage extends Component {
         defaultValue="Gender"
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
         options= {this.genderOpt}
+        textStyle={{fontSize: this.nFontSize}}
+        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+        />
+
+        <ModalDropdown
+        defaultValue="Bib Col"
+        onSelect={(idx, value) => this._handleBibSelect(idx, value)}
+        options= {this.bibOpt}
         textStyle={{fontSize: this.nFontSize}}
         style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
