@@ -24,19 +24,19 @@ export default class StartLineup extends Component {
     // Modal options
     this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
     this.laneOpt   = [1,2,3,4,5,6                                                   ]; 
-    this.sAzureUrl = "https://sportstrackinglogger.azurewebsites.net/?";      
+    this.sAzureUrl = "https://sportstrackinglogger.azurewebsites.net/?"              ;      
 
     // Display props
-    this.nHeight        = 35;
-    this.nPadding       = 15;
-    this.nFontSize      = 20;
-    this.nMargin        = 15;
-    this.nBorderWidth   = 1;
-    this.nModalPadding  = 10;
-    this.nModalMargin   = 20;
-    this.nModalWidth    = 230;
-    this.nModalFontSize = 20;
-    this.sBorderColor   = 'black';
+    this.nHeight        =  35    ;
+    this.nPadding       =  15    ;
+    this.nFontSize      =  20    ;
+    this.nMargin        =  15    ;
+    this.nBorderWidth   =   1    ;
+    this.nModalPadding  =  10    ;
+    this.nModalMargin   =  20    ;
+    this.nModalWidth    = 230    ;
+    this.nModalFontSize =  20    ;
+    this.sBorderColor   = 'black';      
   }
 
   /**
@@ -135,7 +135,7 @@ export default class StartLineup extends Component {
         />
 
         <Button          
-          containerStyle={{width:this.nModalWidth, height:40, margin: 0, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+          containerStyle={{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
           style={{fontSize: 24, color: 'white'}}
           onPress={() => this._handleBtnPress()} >
           Submit
@@ -145,3 +145,6 @@ export default class StartLineup extends Component {
   }
 
 }
+
+
+

@@ -29,15 +29,15 @@ export default class RaceInfo extends Component {
     this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
 
     // Display props
-    this.nHeight        = 35;
-    this.nPadding       = 15;
-    this.nFontSize      = 20;
-    this.nMargin        = 15;
-    this.nBorderWidth   = 1;
-    this.nModalPadding  = 10;
-    this.nModalMargin   = 20;
-    this.nModalWidth    = 130;
-    this.nModalFontSize = 20;
+    this.nHeight        =  35    ;
+    this.nPadding       =  15    ;
+    this.nFontSize      =  20    ;
+    this.nMargin        =  15    ;
+    this.nBorderWidth   =   1    ;
+    this.nModalPadding  =  10    ;
+    this.nModalMargin   =  20    ;
+    this.nModalWidth    = 130    ;
+    this.nModalFontSize =  20    ;
     this.sBorderColor   = 'black';
     
     // NOTE: fetch on iOS ONLY accepts https requests.
@@ -76,9 +76,10 @@ export default class RaceInfo extends Component {
   postDataToAzureFuncAsync() {
     var _sAzureFuncParams = this.createUrlToPost()
     var _sAzureUrl        = this.sAzureUrl + _sAzureFuncParams;
+    console.log(_sAzureUrl);
 
     return fetch(_sAzureUrl)
-      .then((response) => response.json())
+      .then((response    ) => response.json())
       .then((responseJson) => {
         console.log(responseJson)
         return responseJson;
@@ -96,7 +97,7 @@ export default class RaceInfo extends Component {
     fetch(this.sAzureUrl + this.state, {
       method: 'post',
       headers: {
-        'Accept': 'application/json, text/plain, */*',
+        'Accept'      : 'application/json, text/plain, */*',
         'Content-Type': 'application/json'
       },
       // body: JSON.stringify(this.state)
