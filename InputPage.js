@@ -7,13 +7,23 @@ export default class InputPage extends Component {
   constructor(props) {
     super(props);
 
-    this.state = {
-      bibCol : "Bib Color",
-      bibNum : "Bib #"    ,
-      heatNum: "Heat #"   ,
-      laneNum: "Lane #"   ,
-      gender : "Gender" 
+      this.state = {
+      phaseID: '0'       ,
+      heatNum: '0'       ,
+      sport  : 'sport'   ,
+      event  : 'event'   ,
+      temp   : 'temp'    ,
+      precip : 'precip'  ,
+      gender : 'gender'
     };
+
+    // Modal options
+    this.sportOpt  = ['Snowboarding', 'Skiing'];
+    this.eventOpt  = ['Snowboarding', 'Skiing'];
+    this.precipOpt = ['None'                  ];
+    this.genderOpt = ['Men', 'Women'          ];
+    this.heatOpt   = [1,2,3,4                 ];
+    this.laneOpt   = [1,2,3,4,5,6             ];
 
     // Modal options
     this.aGenderOptions = ['Male', 'Female'];
@@ -33,42 +43,80 @@ export default class InputPage extends Component {
     this.nModalFontSize = 20;
     this.sBorderColor   = 'black';
     
+    this.sAzureUrl      = "http://sportstrackinglogger.azurewebsites.net/?";
+    this.sDemoUrlParams = "raceCodex=R1115&phaseID=Heat1&sport=snowboarding&event=SBX&temp=0&precip=None&gender=Female";
   }
   
-  // Test dummy func
-  getMoviesFromApiAsync() {
-    // return fetch('https://facebook.github.io/react-native/movies.json')
-     return fetch('https://sporttrackingdataloggingfunction.azurewebsites.net/api/HttpTriggerJS1?code=GLkzGlv7iRaga6UypZfEYBCuZIzpsFsOJw3opUmxPkrDZrsdsrzqFg==')
-      .then((response) => response.json())
-      .then((responseJson) => {
-        console.log(responseJson.movies)
-        return responseJson.movies;
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+  /**
+   * Loop through each item in state and create a string formatted correctly for Azure Func 
+   */
+  createUrlToPost() {
+    var myString = '';
+    for (var key in this.state) {
+      // Get values
+      if (this.state.hasOwnProperty(key)) {
+         var obj = this.state[key];
+         myString += key + '=' + obj + '&';
+
+         console.log("obj: " + obj);
+         console.log("key: " + key);
+         }
+      }
+      console.log(myString);
+      return myString;
+   }
+
+
+  /** 
+   * Is actually a GET operation, as that is what Azure Functions accept to post data 
+   */
+  postDataToAzureAsync() {
+    return fetch(this.sAzureUrl +this.createUrlToPost)
+    .then((response) => response.json())
+    .then((responseJson) => {
+      console.log(responseJson.movies)
+      return responseJson.movies;
+    })
+    .catch((error) => {
+      console.error(error);
+    });
   }
 
   /**
-   * Posts this.state to Azure Func */
-  postDataToAzureAsync() {
-    fetch('https://sporttrackingdataloggingfunction.azurewebsites.net/api/HttpTriggerJS1?code=GLkzGlv7iRaga6UypZfEYBCuZIzpsFsOJw3opUmxPkrDZrsdsrzqFg==', {
-      method: 'post',
-      headers: {
-        'Accept': 'application/json, text/plain, */*',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(this.state)
-    }).then(res=>res.json())
-      .then(res => console.log(res));
-  }
+   * Post func using Fetch
+   * NOT USED
+   */
+  // postDataToAzureAsync() {
+  //   fetch(this.sAzureUrl + this.state, {
+  //     method: 'post',
+  //     headers: {
+  //       'Accept': 'application/json, text/plain, */*',
+  //       'Content-Type': 'application/json'
+  //     },
+  //     // body: JSON.stringify(this.state)
+  //   }).then(res=>res.json())
+  //     .then(res => console.log(res));
+  // }
 
+    // Test dummy func - sanity check to verify Fetch is working
+    getMoviesFromApiAsync() {
+      return fetch('https://facebook.github.io/react-native/movies.json')
+       .then((response) => response.json())
+       .then((responseJson) => {
+         console.log(responseJson.movies)
+         return responseJson.movies;
+       })
+       .catch((error) => {
+         console.error(error);
+       });
+   }
 
   /** Event handlers for button and modals
    * ------------------------------------ */
   _handleBtnPress() {
     console.log('Pressed!');
-    this.getMoviesFromApiAsync();
+    // this.getMoviesFromApiAsync();
+    this.createUrlToPost();
   }
 
   _handleGenderSelect(idx, value){
@@ -91,6 +139,28 @@ export default class InputPage extends Component {
     console.log('Lane selected ' + this.state.bibCol);
   }
 
+  _handleSportSelect(idx, value){
+    this.state.sport = value;
+    console.log('Sport selected ' + this.state.sport);
+  }
+
+  _handleEventSelect(idx, value){
+    this.state.event = value;
+    console.log('Event selected ' + this.state.event);
+  }
+
+  _handlePrecipSelect(idx, value){
+    this.state.precip = value;
+    console.log('Precip selected ' + this.state.precip);
+  }
+
+  _handleTempSelect(idx, value){
+    this.state.temp = value;
+    console.log('Temp selected '   + this.state.temp);
+  }
+
+
+
   render() {
     return (
       // NOTE: Need margin of at least 40 to prevent text from hidding top of phone in simulator when in portrait
@@ -98,14 +168,20 @@ export default class InputPage extends Component {
               
         <TextInput 
         style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
-        placeholder="Bib #"
-        onChangeText={(bibNum) => this.setState({bibNum})}
+        placeholder="Phase ID"
+        onChangeText={(phaseID) => this.setState({phaseID})}
+        />
+
+        <TextInput 
+        style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
+        placeholder="Temp"
+        onChangeText={(temp) => this.setState({temp})}
         />
 
         <ModalDropdown
-        defaultValue="Bib Color"
-        onSelect={(idx, value) => this._handleBibSelect(idx, value)}
-        options= {this.aBibOptions}
+        defaultValue="Sport"
+        onSelect={(idx, value) => this._handleSportSelect(idx, value)}
+        options= {this.sportOpt}
         textStyle={{fontSize: this.nFontSize}}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}                
         style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
@@ -115,7 +191,7 @@ export default class InputPage extends Component {
         <ModalDropdown
         defaultValue="Heat #"
         onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
-        options= {this.aHeatOptions}
+        options= {this.heatOpt}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 200}}
         textStyle={{fontSize: this.nFontSize}}
         style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
@@ -123,9 +199,29 @@ export default class InputPage extends Component {
         />
 
         <ModalDropdown
+        defaultValue="Precip"
+        onSelect={(idx, value) => this._handlePrecipSelect(idx, value)}
+        options= {this.precipOpt}
+        textStyle={{fontSize: this.nFontSize}}
+        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+        />
+
+        <ModalDropdown
         defaultValue="Lane #"
         onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
-        options= {this.aLaneOptions}
+        options= {this.laneOpt}
+        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+        textStyle={{fontSize: this.nFontSize}}
+        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+        />
+
+        <ModalDropdown
+        defaultValue="Event"
+        onSelect={(idx, value) => this._handleEventSelect(idx, value)}
+        options= {this.eventOpt}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
         textStyle={{fontSize: this.nFontSize}}
         style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
@@ -135,7 +231,7 @@ export default class InputPage extends Component {
         <ModalDropdown
         defaultValue="Gender"
         onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
-        options= {this.aGenderOptions}
+        options= {this.genderOpt}
         textStyle={{fontSize: this.nFontSize}}
         style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
@@ -149,9 +245,7 @@ export default class InputPage extends Component {
         Submit
         </Button>        
         </ScrollView>
-    );
-
-    
+    ); 
   }
 }
 // skip this line if using Create React Native App
