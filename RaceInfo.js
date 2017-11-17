@@ -20,13 +20,13 @@ export default class RaceInfo extends Component {
     };
 
     // Modal options
-    this.sportOpt  = ['Snowboarding', 'Skiing'                                    ];
-    this.eventOpt  = ['Snowboarding', 'Skiing'                                    ];
-    this.precipOpt = ['None'                                                      ];
-    this.genderOpt = ['Men', 'Women'                                              ];
-    this.heatOpt   = [1,2,3,4                                                     ];
-    this.laneOpt   = [1,2,3,4,5,6                                                 ];
-    this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple, Orange', 'Yellow', 'Black' ];
+    this.sportOpt  = ['Snowboarding', 'Skiing'                                      ];
+    this.eventOpt  = ['Snowboarding', 'Skiing'                                      ];
+    this.precipOpt = ['None'                                                        ];
+    this.genderOpt = ['Men', 'Women'                                                ];
+    this.heatOpt   = [1,2,3,4                                                       ];
+    this.laneOpt   = [1,2,3,4,5,6                                                   ];
+    this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
 
     // Display props
     this.nHeight        = 35;
