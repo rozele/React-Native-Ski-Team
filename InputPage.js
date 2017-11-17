@@ -56,14 +56,19 @@ export default class InputPage extends Component {
       // Get values
       if (this.state.hasOwnProperty(key)) {
          var obj = this.state[key];
+         // Build the string for param urls
          myString += key + '=' + obj + '&';
 
          console.log("obj: " + obj);
          console.log("key: " + key);
          }
       }
-      console.log(myString);
-      return myString;
+      // Remove & from final param value
+      var pos       = myString.lastIndexOf('&');
+      var newString = myString.substring(0,pos) + "" + myString.substring(pos+1)
+      console.log(newString);
+
+      return newString;
    }
 
 
