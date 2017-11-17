@@ -8,6 +8,7 @@ import ImageCapture                     from './ImageCapture'  ;
 
 const App = TabNavigator({
     DemoGallery  : { screen: DemoGallery },
+    ScreenTwo    : { screen: ScreenTwo   }, 
     RaceInfo     : { screen: RaceInfo    },
     ScreenOne    : { screen: ScreenOne   },
     ImageCapture : { screen: ImageCapture},

@@ -7,7 +7,8 @@ export default class RaceInfo extends Component {
   constructor(props) {
     super(props);
 
-      this.state = {
+    // TODO: Do I need lane options here?
+    this.state = {
       phaseID: '0'       ,
       heatNum: '0'       ,
       sport  : 'default' ,
@@ -61,7 +62,7 @@ export default class RaceInfo extends Component {
          console.log("key: " + key);
          }
       }
-      // Remove & from final param value
+      // Remove the final & from the end of the string
       var pos       = myString.lastIndexOf('&');
       var newString = myString.substring(0,pos) + "" + myString.substring(pos+1)
       console.log(newString);
@@ -162,8 +163,6 @@ export default class RaceInfo extends Component {
     console.log('Temp selected '   + this.state.temp);
   }
 
-
-
   render() {
     return (
       // NOTE: Need margin of at least 40 to prevent text from hidding top of phone in simulator when in portrait
@@ -212,7 +211,7 @@ export default class RaceInfo extends Component {
         />
 
         <ModalDropdown
-        defaultValue="Lane #"
+        defaultValue="Lane ID"
         onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
         options= {this.laneOpt}
         dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
