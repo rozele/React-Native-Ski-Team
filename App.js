@@ -7,12 +7,12 @@ import DemoGallery                      from './DemoGallery'   ;
 import ImageCapture                     from './ImageCapture'  ;
 
 const App = TabNavigator({
-    DemoGallery  : { screen: DemoGallery  },
     StartLineup  : { screen: StartLineup  }, 
+    HoleEntry    : { screen: HoleEntry    },
     RaceInfo     : { screen: RaceInfo     },
     ScreenOne    : { screen: ScreenOne    },
     ImageCapture : { screen: ImageCapture },
-    HoleEntry    : { screen: HoleEntry    }
+    DemoGallery  : { screen: DemoGallery  },
   }, {
     tabBarOptions: { 
       activeTintColor: '#7567B1',

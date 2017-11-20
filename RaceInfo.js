@@ -255,9 +255,9 @@ export default class RaceInfo extends Component {
         />
 
         <Button          
-        containerStyle={{width:this.nModalWidth, height:40, margin: 0, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
-        style={{fontSize: 24, color: 'white'}}
-        onPress={() => this._handleBtnPress()} >
+        containerStyle = {{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+        style          = {{fontSize: 24, color: 'white'}}
+        onPress        = {() => this._handleBtnPress()} >
         Submit
         </Button>        
         </ScrollView>

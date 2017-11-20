@@ -39,6 +39,9 @@ export default class HoleEntry extends Component {
     this.nModalFontSize =  20    ;
     this.sBorderColor   = 'black';
         
+    // NOTE: fetch on iOS ONLY accepts https requests.
+    // See : https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
+    this.sAzureUrl      = "https://sportstrackinglogger.azurewebsites.net/?";
   }
 
   /**
@@ -88,12 +91,12 @@ export default class HoleEntry extends Component {
    */
   static navigationOptions = {
     tabBarLabel: 'Hole Entry',
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source = {require('../React-Native-Ski-Team/images/search-icon.png')}
-        style  = {[styles.icon, { tintColor: tintColor }]}
-      />
-    )
+    // tabBarIcon: ({ tintColor }) => (
+    //   <Image
+    //     source = {require('../React-Native-Ski-Team/images/search-icon.png')}
+    //     style  = {[styles.icon, { tintColor: tintColor }]}
+    //   />
+    // )
   }
 
 

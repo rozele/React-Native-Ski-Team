@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'       ;
 import {
   StyleSheet,
   Text,
@@ -6,22 +6,22 @@ import {
   View,
   Image,
   ActivityIndicator
-} from 'react-native';
+}                           from 'react-native';
 
 import Gallery from 'react-native-image-gallery';
 import styles from './styles';
 
-class ScreenOne extends Component {
-  // static navigationOptions = {
-  //   title: 'Welcome',
-  //   tabBarLabel: 'ScreenOne',
-  //   tabBarIcon: ({ tintColor }) => (
-  //     <Image
-  //       source={require('../React-Native-Ski-Team/images/notification-icon.png')}
-  //       style={[styles.icon, { tintColor: tintColor }]}
-  //     />
-  //   )
-  // };
+export default class ScreenOne extends Component {
+  static navigationOptions = {
+    title      : 'ScreenOne',
+    tabBarLabel: 'ScreenOne',
+    // tabBarIcon: ({ tintColor }) => (
+    //   <Image
+    //     source = {require('../React-Native-Ski-Team/images/notification-icon.png')}
+    //     style  = {[styles.icon, { tintColor: tintColor }]}
+    //   />
+    // )
+  };
 
   constructor (props) {
     super(props);
@@ -75,6 +75,10 @@ removeImages () {
   }, 2000);
 }
 
+/**
+ * Sets the current image.
+ * @param {float} index - Image to be set 
+ */
 onChangeImage (index) {
   this.setState({ index });
 }
@@ -90,7 +94,7 @@ renderError () {
 get caption () {
   const { images, index } = this.state;
   return (
-      <View style={{ bottom: 0, height: 65, backgroundColor: 'rgba(0, 0, 0, 0.7)', width: '100%', position: 'absolute', justifyContent: 'center' }}>
+      <View style    ={{ bottom: 0, height: 65, backgroundColor: 'rgba(0, 0, 0, 0.7)', width: '100%', position: 'absolute', justifyContent: 'center' }}>
           <Text style={{ textAlign: 'center', color: 'white', fontSize: 15, fontStyle: 'italic' }}>{ (images[index] && images[index].caption) || '' } </Text>
       </View>
   );
@@ -124,5 +128,3 @@ render () {
   );
 }
 }
-
-export default ScreenOne;

@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
-import { View, Text, ActivityIndicator } from 'react-native';
-import Gallery from 'react-native-image-gallery';
+import React, { Component }              from 'react'                     ;
+import { View, Text, ActivityIndicator } from 'react-native'              ;
+import Gallery                           from 'react-native-image-gallery';
 
 export default class DemoGallery extends Component {
-
     constructor (props) {
         super(props);
         this.state = {
-            index: 0,
+            index : 0,
             images: [
                 {
-                    caption: 'This image is bundled with the app, so you must provide dimensions for it',
-                    source: require('./images/broadchurch_thumbnail.png'),
+                    caption   : 'This image is bundled with the app, so you must provide dimensions for it',
+                    source    : require('./images/broadchurch_thumbnail.png'),
                     dimensions: { width: 400, height: 50 }
                 },
                 {
-                    caption: 'Remote image with supplied dimensions',
-                    source: { uri: 'https://pbs.twimg.com/profile_images/686613263811907584/Ni3AWru_.png' },
+                    caption   : 'Remote image with supplied dimensions',
+                    source    : { uri: 'https://pbs.twimg.com/profile_images/686613263811907584/Ni3AWru_.png' },
                     dimensions: { width: 1200, height: 800 }
                 },
                 { caption: 'Caption 4', source: { uri: 'http://i.imgur.com/XP2BE7q.jpg' } },

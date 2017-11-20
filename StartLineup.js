@@ -87,12 +87,12 @@ export default class StartLineup extends Component {
    */
   static navigationOptions = {
     tabBarLabel: 'Start Lineup',
-    tabBarIcon: ({ tintColor }) => (
-      <Image
-        source={require('../React-Native-Ski-Team/images/chat-icon.png')}
-        style={[styles.icon, { tintColor: tintColor }]}
-      />
-    )
+    // tabBarIcon: ({ tintColor }) => (
+    //   <Image
+    //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
+    //     style={[styles.icon, { tintColor: tintColor }]}
+    //   />
+    // )
   }
 
   // Event Handlers
