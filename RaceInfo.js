@@ -7,7 +7,6 @@ export default class RaceInfo extends Component {
   constructor(props) {
     super(props);
 
-    // TODO: Do I need lane options here?
     this.state = {
       phaseID: '0'       ,
       heatNum: '0'       ,

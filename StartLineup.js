@@ -2,15 +2,14 @@ import React, { Component } from 'react'                      ;
 import styles               from './styles'                   ;
 import Button               from 'react-native-button'        ;
 import ModalDropdown        from 'react-native-modal-dropdown';
-
 import {
-  StyleSheet,
+  StyleSheet        ,
   TouchableHighlight,
-  Text,
-  View,
-  Image,
+  Text              ,
+  View              ,
+  Image             ,
   ScrollView
-} from 'react-native';
+}                           from 'react-native'               ;
 
 export default class StartLineup extends Component {
   constructor(props) {
@@ -24,6 +23,8 @@ export default class StartLineup extends Component {
     // Modal options
     this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
     this.laneOpt   = [1,2,3,4,5,6                                                   ]; 
+
+    
     this.sAzureUrl = "https://sportstrackinglogger.azurewebsites.net/?"              ;      
 
     // Display props
@@ -113,31 +114,30 @@ export default class StartLineup extends Component {
   render() {
     return (
       <ScrollView>
-
         <ModalDropdown
-          defaultValue="Lane ID"
-          onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
-          options= {this.laneOpt}
-          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-          textStyle={{fontSize: this.nFontSize}}
-          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          defaultValue      = "Lane ID"
+          onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+          options           = {this.laneOpt}
+          dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+          textStyle         = {{fontSize: this.nFontSize}}
+          style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+          dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
          />
 
         <ModalDropdown
-          defaultValue="Bib Color"
-          onSelect={(idx, value) => this._handleBibSelect(idx, value)}
-          options= {this.bibOpt}
-          textStyle={{fontSize: this.nFontSize}}
-          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
-          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 400}}               
-          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          defaultValue      = "Bib Color"
+          onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+          options           = {this.bibOpt}
+          textStyle         = {{fontSize: this.nFontSize}}
+          style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+          dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 400}}               
+          dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
         />
 
         <Button          
-          containerStyle={{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
-          style={{fontSize: 24, color: 'white'}}
-          onPress={() => this._handleBtnPress()} >
+          containerStyle = {{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+          style          = {{fontSize: 24, color: 'white'}}
+          onPress        = {() => this._handleBtnPress()} >
           Submit
         </Button>         
       </ScrollView>
