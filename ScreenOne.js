@@ -109,18 +109,15 @@ get galleryCount () {
   );
 }
 
-
-
-
 render () {
   return (
       <View style={{ flex: 1 }} >
           <Gallery
-            style={{flex: 1, backgroundColor: '#696969'}}
-            images={this.state.images}
-            errorComponent={this.renderError}
-            onPageSelected={this.onChangeImage}
-            initialPage={0}
+            style          = {{flex: 1, backgroundColor: '#696969'}}
+            images         = {this.state.images}
+            errorComponent = {this.renderError}
+            onPageSelected = {this.onChangeImage}
+            initialPage    = {0}
           />
           { this.galleryCount }
           { this.caption }

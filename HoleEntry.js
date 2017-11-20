@@ -124,7 +124,7 @@ export default class HoleEntry extends Component {
 
   render() {
     return (
-      <View style={{marginTop: 20}}>
+      <View>
       <ScrollView>
             <ModalDropdown
               defaultValue      = "Lane ID"
