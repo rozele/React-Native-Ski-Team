@@ -56,7 +56,7 @@ export default class StartLineup extends Component {
          }
       }
       // Remove the final & from the end of the string
-      var pos       = myString.lastIndexOf('&');
+      var pos     = myString.lastIndexOf('&');
       var newString = myString.substring(0,pos) + "" + myString.substring(pos+1)
       console.log(newString);
 

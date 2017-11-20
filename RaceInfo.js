@@ -19,11 +19,15 @@ export default class RaceInfo extends Component {
       bibCol : 'default' ,
     };
 
-    // Modal options
+    // Modal options 
+    this.raceCodex = [0                                                             ];
+    this.phaseID   = ['Heat1'   , 'Heat2'   , 'Heat3'   , 'Heat4'   , 'Heat5', 'Heat6',
+                      'Quarter1', 'Quarter2', 'Quarter3', 'Quarter4',
+                      'Semi1'   , 'Semi2'   , 'Final'                               ];
     this.sportOpt  = ['Snowboarding', 'Skiing'                                      ];
-    this.eventOpt  = ['Snowboarding', 'Skiing'                                      ];
+    this.eventOpt  = ['SBX, other'                                                  ];
     this.precipOpt = ['None'                                                        ];
-    this.genderOpt = ['Men', 'Women'                                                ];
+    this.genderOpt = ['Male', 'Female'                                              ];
     this.heatOpt   = [1,2,3,4                                                       ];
     this.laneOpt   = [1,2,3,4,5,6                                                   ];
     this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
