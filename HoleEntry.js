@@ -124,6 +124,7 @@ export default class HoleEntry extends Component {
 
   render() {
     return (
+      <View style={{marginTop: 20}}>
       <ScrollView>
             <ModalDropdown
               defaultValue      = "Lane ID"
@@ -162,7 +163,7 @@ export default class HoleEntry extends Component {
               Submit
             </Button>         
           </ScrollView>
+          </View>
     )
-  
   }
 }

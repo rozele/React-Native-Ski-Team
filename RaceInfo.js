@@ -169,98 +169,99 @@ export default class RaceInfo extends Component {
 
   render() {
     return (
-      // NOTE: Need margin of at least 40 to prevent text from hidding top of phone in simulator when in portrait
-      <ScrollView>
-              
-        <TextInput 
-        style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
-        placeholder="Phase ID"
-        onChangeText={(phaseID) => this.setState({phaseID})}
-        />
+      <View style={{marginTop: 20}}>
+        <ScrollView>
+                
+          <TextInput 
+          style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
+          placeholder="Phase ID"
+          onChangeText={(phaseID) => this.setState({phaseID})}
+          />
 
-        <TextInput 
-        style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
-        placeholder="Temp"
-        onChangeText={(temp) => this.setState({temp})}
-        />
+          <TextInput 
+          style={{width: this.nModalWidth, height: this.nHeight, margin: this.nMargin, fontSize: this.nFontSize, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth}}
+          placeholder="Temp"
+          onChangeText={(temp) => this.setState({temp})}
+          />
 
-        <ModalDropdown
-        defaultValue="Sport"
-        onSelect={(idx, value) => this._handleSportSelect(idx, value)}
-        options= {this.sportOpt}
-        textStyle={{fontSize: this.nFontSize}}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}                
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
-  
-        <ModalDropdown
-        defaultValue="Heat #"
-        onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
-        options= {this.heatOpt}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 200}}
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Sport"
+          onSelect={(idx, value) => this._handleSportSelect(idx, value)}
+          options= {this.sportOpt}
+          textStyle={{fontSize: this.nFontSize}}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}                
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
+    
+          <ModalDropdown
+          defaultValue="Heat #"
+          onSelect={(idx, value) => this._handleHeatSelect(idx, value)}
+          options= {this.heatOpt}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 200}}
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <ModalDropdown
-        defaultValue="Precip"
-        onSelect={(idx, value) => this._handlePrecipSelect(idx, value)}
-        options= {this.precipOpt}
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Precip"
+          onSelect={(idx, value) => this._handlePrecipSelect(idx, value)}
+          options= {this.precipOpt}
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <ModalDropdown
-        defaultValue="Lane ID"
-        onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
-        options= {this.laneOpt}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Lane ID"
+          onSelect={(idx, value) => this._handleLaneSelect(idx, value)}
+          options= {this.laneOpt}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <ModalDropdown
-        defaultValue="Event"
-        onSelect={(idx, value) => this._handleEventSelect(idx, value)}
-        options= {this.eventOpt}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Event"
+          onSelect={(idx, value) => this._handleEventSelect(idx, value)}
+          options= {this.eventOpt}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <ModalDropdown
-        defaultValue="Gender"
-        onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
-        options= {this.genderOpt}
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Gender"
+          onSelect={(idx, value) => this._handleGenderSelect(idx, value)}
+          options= {this.genderOpt}
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <ModalDropdown
-        defaultValue="Bib Col"
-        onSelect={(idx, value) => this._handleBibSelect(idx, value)}
-        options= {this.bibOpt}
-        textStyle={{fontSize: this.nFontSize}}
-        style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
-        dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
-        dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
-        />
+          <ModalDropdown
+          defaultValue="Bib Col"
+          onSelect={(idx, value) => this._handleBibSelect(idx, value)}
+          options= {this.bibOpt}
+          textStyle={{fontSize: this.nFontSize}}
+          style={{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}
+          dropdownStyle={{padding: this.nModalPadding, margin: this.nModalMargin, height: 100}}               
+          dropdownTextStyle= {{fontSize: this.nModalFontSize, color: 'black'}} 
+          />
 
-        <Button          
-        containerStyle = {{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
-        style          = {{fontSize: 24, color: 'white'}}
-        onPress        = {() => this._handleBtnPress()} >
-        Submit
-        </Button>        
-        </ScrollView>
+          <Button          
+          containerStyle = {{width:this.nModalWidth, height:40, margin: 15, overflow:'hidden', borderRadius:6, backgroundColor: 'black'}}
+          style          = {{fontSize: 24, color: 'white'}}
+          onPress        = {() => this._handleBtnPress()} >
+          Submit
+          </Button>        
+          </ScrollView>
+        </View>
     ); 
   }
 }

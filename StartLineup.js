@@ -22,10 +22,7 @@ export default class StartLineup extends Component {
 
     // Modal options
     this.bibOpt    = ['Red', 'Green', 'Blue', 'Purple', 'Orange', 'Yellow', 'Black' ];
-    this.laneOpt   = [1,2,3,4,5,6                                                   ]; 
-
-    
-    this.sAzureUrl = "https://sportstrackinglogger.azurewebsites.net/?"              ;      
+    this.laneOpt   = [1,2,3,4,5,6                                                   ];    
 
     // Display props
     this.nHeight        =  35    ;
@@ -37,7 +34,11 @@ export default class StartLineup extends Component {
     this.nModalMargin   =  20    ;
     this.nModalWidth    = 230    ;
     this.nModalFontSize =  20    ;
-    this.sBorderColor   = 'black';      
+    this.sBorderColor   = 'black';     
+    
+    // NOTE: fetch on iOS ONLY accepts https requests.
+    // See : https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
+    this.sAzureUrl      = "https://sportstrackinglogger.azurewebsites.net/?";
   }
 
   /**
@@ -108,11 +109,12 @@ export default class StartLineup extends Component {
 
   _handleBibSelect(idx, value){
     this.state.bibCol = value;
-    console.log('Lane selected ' + this.state.bibCol);
+    console.log('Bib selected ' + this.state.bibCol);
   }
 
   render() {
     return (
+      <View style={{marginTop: 20}}>
       <ScrollView>
         <ModalDropdown
           defaultValue      = "Lane ID"
@@ -141,6 +143,7 @@ export default class StartLineup extends Component {
           Submit
         </Button>         
       </ScrollView>
+      </View>
     )
   }
 
