@@ -5,14 +5,19 @@ import StartLineup                      from './StartLineup'   ;
 import HoleEntry                        from './HoleEntry'     ;
 import DemoGallery                      from './DemoGallery'   ;
 import ImageCapture                     from './ImageCapture'  ;
+import ImageBrowser                     from './ImageBrowser'  ;
+import NewRace                          from './NewRace'       ;
 
 const App = TabNavigator({
+    NewRace      : {screen: NewRace       }, 
     StartLineup  : { screen: StartLineup  }, 
     HoleEntry    : { screen: HoleEntry    },
     RaceInfo     : { screen: RaceInfo     },
     ScreenOne    : { screen: ScreenOne    },
-    ImageCapture : { screen: ImageCapture },
-    DemoGallery  : { screen: DemoGallery  },
+    // ImageCapture : { screen: ImageCapture },
+    // ImageBrowser : { screen: ImageBrowser }
+    // DemoGallery  : { screen: DemoGallery  },
+
   }, {
     tabBarOptions: { 
       activeTintColor: '#7567B1',
