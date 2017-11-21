@@ -12,7 +12,7 @@ import {
   ScrollView
 }                           from 'react-native'               ;
 
-export default class NewRace extends Component {
+export default class StartGateLineup extends Component {
   constructor(props) {
     super(props);
 
@@ -94,7 +94,7 @@ export default class NewRace extends Component {
    *  NavBar at bottom of screen
    */
   static navigationOptions = {
-    tabBarLabel: 'New Race',
+    tabBarLabel: 'Start',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
@@ -237,11 +237,13 @@ export default class NewRace extends Component {
             <Row>
                 <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
                     <Text style = {{fontSize: 40}}> 
-                        New Race
+                        Start Gate Line Up
                         </Text>
                     </View>
             </Row>
             <Row>
+            <Image source = {require ('./images/CameraIcon.png')}
+                   style  ={{ width: 50, height: 40, }} />              
             <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
                 <Button          
                 containerStyle = {{justifyContent: 'center', width: 130, height:80, margin: 15, overflow:'hidden', borderRadius: 18, backgroundColor: 'green'}}
