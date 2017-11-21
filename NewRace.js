@@ -35,7 +35,9 @@ export default class NewRace extends Component {
     this.nModalMargin   =  20    ;
     this.nModalWidth    = 230    ;
     this.nModalFontSize =  20    ;
-    this.sBorderColor   = 'black';     
+    this.sBorderColor   = 'black';    
+    this.nTextBoxWidth  = 130    ;
+    this.nTextBoxFont   =  18    ;
     
     // NOTE: fetch on iOS ONLY accepts https requests.
     // See : https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
@@ -113,32 +115,63 @@ export default class NewRace extends Component {
     console.log('Bib selected ' + this.state.bibCol);
   }
 
+  // See this for rendering Col|Rows: https://code.tutsplus.com/tutorials/get-started-with-layouts-in-react-native--cms-27418
+
   render() {
         return (
 
             <Grid>
             <Col>
-                <Row size={20} style={stylesObj.blue_box}></Row>
-                <Text> 
+            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Race Codex:
                 </Text>
-                <Text> 
+            </View>
+            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Gender:
                 </Text>
-                <Text> 
+            </View>
+            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Temp:
                 </Text>
-                <Text> 
+                </View>
+                <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Precip:
                 </Text>
-                <Text> 
+                </View>
+                <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>                            
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Resort:
                 </Text>
+                </View>
                 <Text> 
                     Racers:
                 </Text>
             </Col>
-            <Col style={stylesObj.gray_box}></Col>
+            <Col>
+                <ModalDropdown
+                    defaultValue      = "Race Codex"
+                    onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                    options           = {this.laneOpt}
+                    dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                    textStyle         = {{fontSize: this.nFontSize}}
+                    style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+                    dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                />
+                <ModalDropdown
+                defaultValue      = "Gender"
+                onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                options           = {this.laneOpt}
+                dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                textStyle         = {{fontSize: this.nFontSize}}
+                style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+                dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+            />
+            </Col>
+
             <Col>
                 <Row size={50} style={stylesObj.orange_box}></Row>
                 <Row size={50} style={stylesObj.green_box}></Row>
@@ -225,6 +258,9 @@ const stylesObj = StyleSheet.create({
     },
     blue_box: {
       backgroundColor: 'blue'
+    },
+    border_styles: {
+        width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight
     }
   });
 
