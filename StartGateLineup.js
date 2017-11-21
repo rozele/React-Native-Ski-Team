@@ -236,14 +236,19 @@ export default class StartGateLineup extends Component {
             <Col>
             <Row>
                 <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
-                    <Text style = {{fontSize: 40}}> 
+                    <Text style = {{fontSize: 40, justifyContent: 'center'}}> 
                         Start Gate Line Up
                         </Text>
                     </View>
             </Row>
             <Row>
-            <Image source = {require ('./images/CameraIcon.png')}
-                   style  ={{ width: 50, height: 40, }} />              
+            <View style={{justifyContent: 'center', paddingLeft: 80}}>   
+                <Image source = {require ('./images/CameraIcon.png')}
+                       style  = {{ width: 60, height: 60, }} 
+                />     
+            </View>     
+            </Row>   
+            <Row>
             <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
                 <Button          
                 containerStyle = {{justifyContent: 'center', width: 130, height:80, margin: 15, overflow:'hidden', borderRadius: 18, backgroundColor: 'green'}}
