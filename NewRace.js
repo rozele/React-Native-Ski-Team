@@ -167,18 +167,18 @@ export default class NewRace extends Component {
                     onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
                     options           = {this.laneOpt}
                     dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-                    textStyle         = {{fontSize: this.nFontSize}}
-                    style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
+                    textStyle         = {{fontSize: this.nFontSize,textAlign: 'center', }}
+                    style             = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}
                     dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
                 />
                 <ModalDropdown
-                defaultValue      = "Gender"
-                onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
-                options           = {this.laneOpt}
-                dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-                textStyle         = {{fontSize: this.nFontSize}}
-                style             = {{width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}        
-                dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                    defaultValue      = "Gender"
+                    onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                    options           = {this.laneOpt}
+                    dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                    textStyle         = {{fontSize: this.nFontSize,textAlign: 'center', }}
+                    style             = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}
+                    dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
             />
             </Col>
 
