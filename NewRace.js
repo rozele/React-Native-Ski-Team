@@ -35,9 +35,14 @@ export default class NewRace extends Component {
     this.nModalMargin   =  20    ;
     this.nModalWidth    = 230    ;
     this.nModalFontSize =  20    ;
-    this.sBorderColor   = 'black';    
-    this.nTextBoxWidth  = 130    ;
-    this.nTextBoxFont   =  18    ;
+    this.sBorderColor   = 'black'; 
+    
+    this.nTextBoxMargin  =  10    ;
+    this.nTextBoxpadding =  20    ; 
+    this.nTextBoxWidth   = 130    ;
+    this.nTextBoxFont    =  18    ;
+
+    this.nThirdColPadL   =  40    ;
     
     // NOTE: fetch on iOS ONLY accepts https requests.
     // See : https://stackoverflow.com/questions/38418998/react-native-fetch-network-request-failed
@@ -119,38 +124,43 @@ export default class NewRace extends Component {
 
   render() {
         return (
-
             <Grid>
+
+            {/* --------- Column------------- */}
             <Col>
-            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
+            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
+                <Text style = {{fontSize: this.nTextBoxFont}}> 
                     Race Codex:
                 </Text>
             </View>
-            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
+            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
+            <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Gender:
                 </Text>
             </View>
-            <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
+            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
+            <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Temp:
                 </Text>
                 </View>
-                <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>            
+                <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
                 <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Precip:
                 </Text>
-                </View>
-                <View style={{width: this.nTextBoxWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight}}>                            
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
+            </View>
+            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
+            <Text style = {{fontSize: this.nTextBoxFont }}> 
                     Resort:
                 </Text>
                 </View>
-                <Text> 
-                    Racers:
-                </Text>
+                <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
+                <Text style = {{fontSize: this.nTextBoxFont }}> 
+                        Racers:
+                    </Text>
+                </View>
             </Col>
+
+            {/* --------- Column------------- */}
             <Col>
                 <ModalDropdown
                     defaultValue      = "Race Codex"
@@ -172,10 +182,27 @@ export default class NewRace extends Component {
             />
             </Col>
 
+            {/* --------- Column------------- */}
             <Col>
-                <Row size={50} style={stylesObj.orange_box}></Row>
-                <Row size={50} style={stylesObj.green_box}></Row>
+            <Row>
+                <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
+                    <Text style = {{fontSize: 40}}> 
+                        New Race
+                        </Text>
+                    </View>
+            </Row>
+            <Row>
+            <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
+                <Button          
+                containerStyle = {{justifyContent: 'center', width: 130, height:80, margin: 15, overflow:'hidden', borderRadius: 18, backgroundColor: 'green'}}
+                style          = {{fontSize: 24, color: 'white'}}
+                onPress        = {() => this._handleBtnPress()} >
+                    GO
+                </Button>       
+                </View>
+            </Row>
             </Col>
+
         </Grid>
 
 
