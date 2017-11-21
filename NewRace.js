@@ -119,6 +119,24 @@ export default class NewRace extends Component {
             <Grid>
             <Col>
                 <Row size={20} style={stylesObj.blue_box}></Row>
+                <Text> 
+                    Race Codex:
+                </Text>
+                <Text> 
+                    Gender:
+                </Text>
+                <Text> 
+                    Temp:
+                </Text>
+                <Text> 
+                    Precip:
+                </Text>
+                <Text> 
+                    Resort:
+                </Text>
+                <Text> 
+                    Racers:
+                </Text>
             </Col>
             <Col style={stylesObj.gray_box}></Col>
             <Col>
@@ -156,7 +174,6 @@ export default class NewRace extends Component {
         //     </View>
         //     <View style={{width: 50, height: 50, backgroundColor: 'steelblue'}} />
         //   </View>
-
 
         );
 
