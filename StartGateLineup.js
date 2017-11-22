@@ -109,12 +109,15 @@ export default class StartGateLineup extends Component {
     this.postDataToAzureFuncAsync();
   }
 
-  _handleRaceCodexSelect(idx, value){
-
-  }
-
+  /**
+   * Stores bib color to a lane.
+   * Removes current value from array, so that it does not appear when next button is selected.
+   * @param {number} idx   - Index of currently selected item in array
+   * @param {*}      value - Currently selected item in array
+   */
   _handleBibSelect(idx, value){
     this.state.bibCol = value;
+    this.bibOpt.splice(idx, 1);
     console.log('Bib selected ' + this.state.bibCol);
   }
 
