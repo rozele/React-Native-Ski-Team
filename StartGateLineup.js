@@ -195,7 +195,7 @@ export default class StartGateLineup extends Component {
                     </Col>
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
-                            defaultValue      = "Lane 2"
+                            defaultValue      = "Lane 6"
                             onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 3280}}        
