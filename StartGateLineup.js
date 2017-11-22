@@ -142,40 +142,6 @@ export default class StartGateLineup extends Component {
 
             {/* --------- Column------------- */}
             <Col>
-            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-                <Text style = {{fontSize: this.nTextBoxFont}}> 
-                    Race Codex:
-                </Text>
-            </View>
-            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-            <Text style = {{fontSize: this.nTextBoxFont }}> 
-                    Gender:
-                </Text>
-            </View>
-            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-            <Text style = {{fontSize: this.nTextBoxFont }}> 
-                    Temp:
-                </Text>
-                </View>
-                <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
-                    Precip:
-                </Text>
-            </View>
-            <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-            <Text style = {{fontSize: this.nTextBoxFont }}> 
-                    Resort:
-                </Text>
-                </View>
-                <View style={{justifyContent: 'center', alignItems: 'flex-end', width: this.nTextBoxWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}>
-                <Text style = {{fontSize: this.nTextBoxFont }}> 
-                        Racers:
-                    </Text>
-                </View>
-            </Col>
-
-            {/* --------- Column------------- */}
-            <Col>
                 <ModalDropdown
                     defaultValue      = "Race Codex"
                     onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
@@ -233,23 +199,49 @@ export default class StartGateLineup extends Component {
             </Col>
 
             {/* --------- Column------------- */}
-            <Col>
+            <Col backgroundColor = 'grey'>
             <Row>
                 <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
-                    <Text style = {{fontSize: 40, justifyContent: 'center'}}> 
+                    <Text style = {{fontSize: 35, justifyContent: 'center'}}> 
                         Start Gate Line Up
                         </Text>
                     </View>
             </Row>
-            <Row>
-            <View style={{justifyContent: 'center', paddingLeft: 80}}>   
+            <Row >
+                <Col style={{justifyContent: 'center',     alignItems: 'center'}}>
+                    <ModalDropdown
+                        defaultValue      = "Race Codex"
+                        onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                        options           = {this.laneOpt}
+                        dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                        textStyle         = {{fontSize: this.nFontSize,textAlign: 'center', }}
+                        style             = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth /2,
+                                              margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                        dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                    />
+                </Col>
+                <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <ModalDropdown
+                    defaultValue      = "Race Codex"
+                    onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                    options           = {this.laneOpt}
+                    dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                    textStyle         = {{fontSize: this.nFontSize,textAlign: 'center', }}
+                    style             = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth /2,
+                                          borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, height:this.nHeight}}
+                    dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                    />
+                </Col>
+            </Row>
+            <Row  style={{justifyContent: 'center'}}>
+            <View style={{justifyContent: 'center'}}>   
                 <Image source = {require ('./images/CameraIcon.png')}
                        style  = {{ width: 60, height: 60, }} 
                 />     
             </View>     
             </Row>   
-            <Row>
-            <View style={{alignItems: 'flex-end', paddingLeft: this.nThirdColPadL}}>
+            <Row style={{justifyContent: 'center'}}>
+            <View style={{alignItems: 'flex-end'}}>
                 <Button          
                 containerStyle = {{justifyContent: 'center', width: 130, height:80, margin: 15, overflow:'hidden', borderRadius: 18, backgroundColor: 'green'}}
                 style          = {{fontSize: 24, color: 'white'}}
