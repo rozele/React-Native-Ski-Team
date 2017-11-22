@@ -142,57 +142,88 @@ export default class StartGateLineup extends Component {
 
             {/* --------- Column------------- */}
             <Col style = {{alignItems: 'center', justifyContent: 'center',}} >
-                <View style   = {{alignItems: 'center', justifyContent: 'center',}}>   
+                <View style   = {{alignItems: 'center', justifyContent: 'center',paddingTop: 20}}>   
                 <Image source = {require ('./images/StartLineImg.jpg')}
-                    style  = {{ width: 300, height: 300}} 
+                    style  = {{ width: 300, height: 220}} 
                 />     
                 </View>    
 
             <Row>
-                    <Col style = {{backgroundColor: 'blue'}}>
-                        <View>
-                        <Text style = {{fontSize:14}}> 
-                            Test 1
-                            </Text>
-                        </View>
+                <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                    <ModalDropdown
+                        defaultValue      = "Lane 1"
+                        onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                        options           = {this.laneOpt}
+                        dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                        textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                        style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                            margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                        dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                    />
+                </Col>
+                <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "Lane 2"
+                            onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                            options           = {this.laneOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
                     </Col>
-                    <Col style = {{backgroundColor: 'grey'}}>
-                            <View>
-                            <Text style = {{fontSize: 14}}> 
-                                Test 2
-                                </Text>
-                             </View>
+                    <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "Lane 3"
+                            onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                            options           = {this.laneOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
                     </Col>
-                    <Col style = {{backgroundColor: 'grey'}}>
-                        <View>
-                        <Text style = {{fontSize: 14}}> 
-                            Test 3
-                            </Text>
-                    </View>
+                    <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "Lane 4"
+                            onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                            options           = {this.laneOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
+                    </Col>  
+                    <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "Lane 5"
+                            onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                            options           = {this.laneOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
                     </Col>
-                    <Col style = {{backgroundColor: 'grey'}}>
-                        <View>
-                        <Text style = {{fontSize: 14}}> 
-                            Test 4
-                            </Text>
-                        </View>
-                    </Col>
-                    <Col style = {{backgroundColor: 'grey'}}>
-                        <View>
-                        <Text style = {{fontSize: 14}}> 
-                            Test 5
-                            </Text>
-                        </View>
-                    </Col>
-                    <Col style = {{backgroundColor: 'grey'}}>
-                        <View>
-                        <Text style = {{fontSize: 14}}> 
-                            Test 6
-                            </Text>
-                        </View>
+                    <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "Lane 2"
+                            onSelect          = {(idx, value) => this._handleLaneSelect(idx, value)}
+                            options           = {this.laneOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 60,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
                     </Col>
                 </Row>
             </Col>
+            
             {/* --------- Column------------- */}
             <Col>
             <Row style={{alignItems: 'center', justifyContent: 'center', margin:-20}}>
