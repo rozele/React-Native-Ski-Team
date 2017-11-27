@@ -8,17 +8,19 @@ import ImageCapture                     from './ImageCapture'   ;
 import ImageBrowser                     from './ImageBrowser'   ;
 import NewRace                          from './NewRace'        ;
 import StartGateLineup                  from './StartGateLineup';
+import HoleLineup                       from './HoleLineup'     ;
 
 const App = TabNavigator({
     StartGateLineup : { screen: StartGateLineup },
     NewRace         : { screen: NewRace         }, 
     StartLineup     : { screen: StartLineup     }, 
-    HoleEntry       : { screen: HoleEntry       },
+    HoleLineup      : { screen: HoleLineup      },
     RaceInfo        : { screen: RaceInfo        },
     // ScreenOne    : { screen: ScreenOne     },
     // ImageCapture : { screen: ImageCapture },
     // ImageBrowser : { screen: ImageBrowser }
     // DemoGallery  : { screen: DemoGallery  },
+    // HoleEntry    : { screen: HoleEntry    },
 
   }, {
     tabBarOptions: { 
