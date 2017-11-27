@@ -180,7 +180,7 @@ export default class NewRace extends Component {
             <Col>
                 <TextInput 
                     style        = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}
-                    placeholder  = "R9998"
+                    placeholder  = " R9998"
                     onChangeText = {(sCodex) => this.setState({sCodex})}
                 />
                 <ModalDropdown
@@ -207,9 +207,9 @@ export default class NewRace extends Component {
                     dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
                 />
                 <TextInput 
-                    style        = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}
-                    placeholder  = "Copper Mountain"
-                    onChangeText = {(sResort) => this.setState({sResort})}
+                style        = {{justifyContent: "center", alignItems: "center", width: this.nModalWidth, margin: this.nTextBoxMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:this.nText, height:this.nHeight}}
+                placeholder  = " Copper Mountain"
+                onChangeText = {(sResort) => this.setState({sResort})}
                 />
                 <ModalDropdown
                     defaultValue      = "1"

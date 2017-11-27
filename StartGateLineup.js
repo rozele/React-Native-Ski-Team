@@ -16,17 +16,10 @@ export default class StartGateLineup extends Component {
   constructor(props) {
     super(props);
 
-    // this.state = {
-    //   nLane  : '0'       ,
-    //   bibCol : 'default' ,
-    // };
-
     this.state = {
         nLane  : [1,2,3,4,5,6],
         bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
       };
-
-    
 
     // Modal options
     this.bibOpt  = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
@@ -126,10 +119,8 @@ export default class StartGateLineup extends Component {
    * @param {*}      value - Currently selected item in array
    */
     _handleBibSelect(idx, value, nLane){
-        console.log(nLane);
-        // Store the bibCOl in an aarray, then loop
         this.state.bibCol[nLane -1 ] = value; 
-        this.state.nLane [nLane -1]  = nLane;
+        this.state.nLane [nLane -1 ] = nLane;
         this.bibOpt.splice(idx, 1);
         console.log('Bib selected ' + this.state.bibCol);
     }
@@ -155,21 +146,21 @@ export default class StartGateLineup extends Component {
                         dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                         textStyle         = {{fontSize: 14, textAlign: 'center', }}
                         style             = {{justifyContent: "center", alignItems: "center", width: 55,
-                                            margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
+                                              margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
                         dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
                     />
                 </Col>
                 <Col style={{justifyContent: 'center', alignItems: 'center'}}>
-                        <ModalDropdown
-                            defaultValue      = "Lane 2"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 2)}
-                            options           = {this.bibOpt}
-                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
-                            style             = {{justifyContent: "center", alignItems: "center", width: 55,
-                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
-                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
-                        />
+                    <ModalDropdown
+                        defaultValue      = "Lane 2"
+                        onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 2)}
+                        options           = {this.bibOpt}
+                        dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                        textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                        style             = {{justifyContent: "center", alignItems: "center", width: 55,
+                                            margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
+                        dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                    />
                     </Col>
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
