@@ -16,13 +16,21 @@ export default class StartGateLineup extends Component {
   constructor(props) {
     super(props);
 
+    // this.state = {
+    //   nLane  : '0'       ,
+    //   bibCol : 'default' ,
+    // };
+
     this.state = {
-      laneID : '0'       ,
-      bibCol : 'default' ,
-    };
+        nLane  : [1,2,3,4,5,6],
+        bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
+      };
+
+    
 
     // Modal options
-    this.bibOpt    = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
+    this.bibOpt  = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
+    this.laneOpt = [1,2,3,4,5,6                                        ];
 
     // Display props
     this.nHeight         =  35    ;
@@ -53,23 +61,25 @@ export default class StartGateLineup extends Component {
    */
   createUrlToPost() {
     var myString = '';
-    for (var key in this.state) {
-      // Get values in this.state object
-      if (this.state.hasOwnProperty(key)) {
-         var obj = this.state[key];
-         // Build the string for param urls
-         myString += key + '=' + obj + '&';
+    
+    for (var key in this.state.nLane) {
+    // Get values in this.state object
+    if (this.state.nLane.hasOwnProperty(key)) {
+        var obj = this.state.bibCol[key];
+        // Build the string for param urls
+        myString += key + '=' + obj + '&';
 
-         console.log("obj: " + obj);
-         console.log("key: " + key);
-         }
-      }
-      // Remove the final & from the end of the string
-      var pos     = myString.lastIndexOf('&');
-      var newString = myString.substring(0,pos) + "" + myString.substring(pos+1)
-      console.log(newString);
+        console.log("obj: " + obj);
+        console.log("key: " + key);
+        }
+    }
 
-      return newString;
+    // Remove the final & from the end of the string
+    var pos       = myString.lastIndexOf('&');
+    var newString = myString.substring(0,pos) + "" + myString.substring(pos+1)
+    console.log(newString);
+
+    return newString;
    }
 
   /** 
@@ -115,13 +125,22 @@ export default class StartGateLineup extends Component {
    * @param {number} idx   - Index of currently selected item in array
    * @param {*}      value - Currently selected item in array
    */
-  _handleBibSelect(idx, value){
-    this.state.bibCol = value;
-    this.bibOpt.splice(idx, 1);
-    console.log('Bib selected ' + this.state.bibCol);
-  }
+//   _handleBibSelect(idx, value, nLane){
+//       console.log(nLane);
+//     this.state.bibCol= value;
+//     this.state.nLane = nLane;
+//     this.bibOpt.splice(idx, 1);
+//     console.log('Bib selected ' + this.state.bibCol);
+//   }
 
-  // See this for rendering Col|Rows: https://code.tutsplus.com/tutorials/get-started-with-layouts-in-react-native--cms-27418
+    _handleBibSelect(idx, value, nLane){
+        console.log(nLane);
+        // Store the bibCOl in an aarray, then loop
+        this.state.bibCol[nLane -1 ] = value; 
+        this.state.nLane [nLane -1]  = nLane;
+        this.bibOpt.splice(idx, 1);
+        console.log('Bib selected ' + this.state.bibCol);
+    }
 
   render() {
         return (
@@ -131,7 +150,7 @@ export default class StartGateLineup extends Component {
             <Col size={60} style = {{alignItems: 'center', justifyContent: 'center'}} >
                 <View style   = {{alignItems: 'center', justifyContent: 'center', paddingTop: 10}}>   
                 <Image source = {require ('./images/StartLineImg.jpg')}
-                    style  = {{ width: 300, height: 220}} 
+                       style  = {{ width: 300, height: 220}} 
                 />     
                 </View>    
 
@@ -139,7 +158,7 @@ export default class StartGateLineup extends Component {
                 <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                     <ModalDropdown
                         defaultValue      = "Lane 1"
-                        onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                        onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 1)}
                         options           = {this.bibOpt}
                         dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                         textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -151,7 +170,7 @@ export default class StartGateLineup extends Component {
                 <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
                             defaultValue      = "Lane 2"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 2)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                             textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -163,7 +182,7 @@ export default class StartGateLineup extends Component {
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
                             defaultValue      = "Lane 3"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 3)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                             textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -175,7 +194,7 @@ export default class StartGateLineup extends Component {
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
                             defaultValue      = "Lane 4"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 4)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                             textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -187,7 +206,7 @@ export default class StartGateLineup extends Component {
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
                             defaultValue      = "Lane 5"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 5)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                             textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -199,7 +218,7 @@ export default class StartGateLineup extends Component {
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
                             defaultValue      = "Lane 6"
-                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value)}
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 6)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 3280}}        
                             textStyle         = {{fontSize: 14, textAlign: 'center', }}
