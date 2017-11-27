@@ -5,7 +5,6 @@
 	};
 	objectVersion = 46;
 	objects = {
-
 /* Begin PBXBuildFile section */
 		000C27421FC388E8002784C2 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 000C27401FC3870B002784C2 /* libRNFetchBlob.a */; };
 		00C302E51ABCBA2D00DB3ED1 /* libRCTActionSheet.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 00C302AC1ABCB8CE00DB3ED1 /* libRCTActionSheet.a */; };
@@ -40,6 +39,8 @@
 		5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5E9157331DD0AC6500FF2AA8 /* libRCTAnimation.a */; };
 		832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 832341B51AAA6A8300B99B32 /* libRCTText.a */; };
 		ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ADBDB9271DFEBF0700ED6528 /* libRCTBlob.a */; };
+		9BB2D6718DB74C3889723A2E /* libRNSpinkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C5699C90C2C940CCB369DEA7 /* libRNSpinkit.a */; };
+		78B8A0B79F2D447B891EC3C3 /* libBVLinearGradient.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3836B3B0C57E477393DEE31D /* libBVLinearGradient.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -342,6 +343,10 @@
 		AABBA457F6804D7AA673859C /* libRCTCamera.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTCamera.a; sourceTree = "<group>"; };
 		ADBDB91F1DFEBF0600ED6528 /* RCTBlob.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTBlob.xcodeproj; path = "../node_modules/react-native/Libraries/Blob/RCTBlob.xcodeproj"; sourceTree = "<group>"; };
 		D79F7893DA244EE0A6994E8F /* libRCTOrientation.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libRCTOrientation.a; sourceTree = "<group>"; };
+		1877102AA83C4A51BDCFD925 /* RNSpinkit.xcodeproj */ = {isa = PBXFileReference; name = "RNSpinkit.xcodeproj"; path = "../node_modules/react-native-spinkit/ios/RNSpinkit.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		C5699C90C2C940CCB369DEA7 /* libRNSpinkit.a */ = {isa = PBXFileReference; name = "libRNSpinkit.a"; path = "libRNSpinkit.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		DDB7A74859F44AFD8E018716 /* BVLinearGradient.xcodeproj */ = {isa = PBXFileReference; name = "BVLinearGradient.xcodeproj"; path = "../node_modules/react-native-linear-gradient/BVLinearGradient.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		3836B3B0C57E477393DEE31D /* libBVLinearGradient.a */ = {isa = PBXFileReference; name = "libBVLinearGradient.a"; path = "libBVLinearGradient.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -373,6 +378,8 @@
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
 				2011EDB9005E4BA8B1FE757C /* libRCTOrientation.a in Frameworks */,
 				30052B7796884B53BFCF1EFE /* libRCTCamera.a in Frameworks */,
+				9BB2D6718DB74C3889723A2E /* libRNSpinkit.a in Frameworks */,
+				78B8A0B79F2D447B891EC3C3 /* libBVLinearGradient.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,6 +596,8 @@
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
 				59465624EEA34F0C89112774 /* RCTOrientation.xcodeproj */,
 				4D37612114E8412688FBB791 /* RCTCamera.xcodeproj */,
+				1877102AA83C4A51BDCFD925 /* RNSpinkit.xcodeproj */,
+				DDB7A74859F44AFD8E018716 /* BVLinearGradient.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1220,12 +1229,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = SkiAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1248,12 +1261,16 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = SkiAppTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1279,6 +1296,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = SkiApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -1306,6 +1325,8 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = SkiApp/Info.plist;
 				"INFOPLIST_FILE[sdk=*]" = SkiApp/Info.plist;
@@ -1338,11 +1359,15 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = "SkiApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1374,11 +1399,15 @@
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-orientation/iOS/RCTOrientation/**",
 					"$(SRCROOT)/../node_modules/react-native-camera/ios",
+					"$(SRCROOT)\..\node_modules\react-native-spinkit\ios/**",
+					"$(SRCROOT)\..\node_modules\react-native-linear-gradient\BVLinearGradient",
 				);
 				INFOPLIST_FILE = "SkiApp-tvOS/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
@@ -1411,6 +1440,8 @@
 					"$(inherited)",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.facebook.REACT.SkiApp-tvOSTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1435,6 +1466,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 					"\"$(SRCROOT)/$(TARGET_NAME)\"",
 				);

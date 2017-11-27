@@ -15,10 +15,10 @@ const App = TabNavigator({
     StartLineup     : { screen: StartLineup     }, 
     HoleEntry       : { screen: HoleEntry       },
     RaceInfo        : { screen: RaceInfo        },
-    // ScreenOne    : { screen: ScreenOne     },
-    // ImageCapture : { screen: ImageCapture },
-    // ImageBrowser : { screen: ImageBrowser }
-    // DemoGallery  : { screen: DemoGallery  },
+    ImageCapture    : { screen: ImageCapture    },
+    // ScreenOne    : { screen: ScreenOne       },
+    // ImageBrowser : { screen: ImageBrowser    },
+    // DemoGallery  : { screen: DemoGallery     },
 
   }, {
     tabBarOptions: { 
