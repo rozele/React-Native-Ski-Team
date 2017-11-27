@@ -61,13 +61,13 @@ export default class StartGateLineup extends Component {
    */
   createUrlToPost() {
     var myString = '';
-    
+
     for (var key in this.state.nLane) {
     // Get values in this.state object
     if (this.state.nLane.hasOwnProperty(key)) {
         var obj = this.state.bibCol[key];
         // Build the string for param urls
-        myString += key + '=' + obj + '&';
+        myString += 'laneID' + key + '=' + obj + '&';
 
         console.log("obj: " + obj);
         console.log("key: " + key);
@@ -125,14 +125,6 @@ export default class StartGateLineup extends Component {
    * @param {number} idx   - Index of currently selected item in array
    * @param {*}      value - Currently selected item in array
    */
-//   _handleBibSelect(idx, value, nLane){
-//       console.log(nLane);
-//     this.state.bibCol= value;
-//     this.state.nLane = nLane;
-//     this.bibOpt.splice(idx, 1);
-//     console.log('Bib selected ' + this.state.bibCol);
-//   }
-
     _handleBibSelect(idx, value, nLane){
         console.log(nLane);
         // Store the bibCOl in an aarray, then loop
