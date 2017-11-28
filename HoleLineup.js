@@ -104,7 +104,7 @@ export default class HoleLineup extends Component {
    *  NavBar at bottom of screen
    */
   static navigationOptions = {
-    tabBarLabel: 'Hole',
+    tabBarLabel: 'Hole Lineup',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}

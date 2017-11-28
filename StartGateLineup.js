@@ -97,7 +97,7 @@ export default class StartGateLineup extends Component {
    *  NavBar at bottom of screen
    */
   static navigationOptions = {
-    tabBarLabel: 'Start',
+    tabBarLabel: 'Start Gate',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
