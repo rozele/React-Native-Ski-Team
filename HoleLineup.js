@@ -16,11 +16,6 @@ export default class HoleLineup extends Component {
   constructor(props) {
     super(props);
 
-    // this.state = {
-    //   nLane  : '0'       ,
-    //   bibCol : 'default' ,
-    // };
-
     this.state = {
         nLane  : [1,2,3,4,5,6],
         bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
@@ -258,10 +253,12 @@ export default class HoleLineup extends Component {
                 </Col>
             </Row>
             <Row  style={{justifyContent: 'center', margin: -20, paddingBottom: 6}}>
-            <View style={{justifyContent: 'center'}}>   
-                <Image source = {require ('./images/CameraIcon.png')}
-                       style  = {{ width: 70, height: 70, }} 
-                />     
+            <View style={{justifyContent: 'center'}}>                   
+                <Button>
+                    <Image source = {require ('./images/CameraIcon.png')}
+                     style  = {{ width: 70, height: 70, }} 
+                    />   
+              </Button>
             </View>     
             </Row>   
             <Row style={{justifyContent: 'center', margin: -10}}>
