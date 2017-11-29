@@ -13,7 +13,7 @@ import Camera               from 'react-native-camera';
 
 export default class ImageCapture extends Component {
   static navigationOptions = {
-    tabBarLabel: 'Camera',
+    tabBarLabel: 'Cam',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
