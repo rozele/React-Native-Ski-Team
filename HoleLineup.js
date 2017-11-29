@@ -130,6 +130,8 @@ export default class HoleLineup extends Component {
     }
 
   render() {
+    const { navigate } = this.props.navigation;
+    
         return (
             <Grid>
 
@@ -254,10 +256,9 @@ export default class HoleLineup extends Component {
             </Row>
             <Row  style={{justifyContent: 'center', margin: -20, paddingBottom: 6}}>
             <View style={{justifyContent: 'center'}}>                   
-                <Button>
+                <Button onPress={() => navigate('ImageCapture') }>
                     <Image source = {require ('./images/CameraIcon.png')}
-                     style  = {{ width: 70, height: 70, }} 
-                    />   
+                           style  = {{ width: 70, height: 70, }}  />   
               </Button>
             </View>     
             </Row>   

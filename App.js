@@ -12,7 +12,7 @@ const App = TabNavigator({
     StartGateLineup : { screen: StartGateLineup },
     HoleLineup      : { screen: HoleLineup      },
     RaceInfo        : { screen: RaceInfo        },
-    // ImageCapture : { screen: ImageCapture },
+    ImageCapture    : { screen: ImageCapture    },
     // ImageBrowser : { screen: ImageBrowser }
     // DemoGallery  : { screen: DemoGallery  },
   }, {
