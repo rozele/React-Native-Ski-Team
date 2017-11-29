@@ -21,8 +21,6 @@ export default class HoleLineup extends Component {
         bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
       };
 
-    
-
     // Modal options
     this.bibOpt  = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
     this.laneOpt = [1,2,3,4,5,6                                        ];
