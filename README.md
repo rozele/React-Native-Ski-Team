@@ -9,8 +9,11 @@
 ### Hiding Warnings on iOS
 See this [Stack Overflow Post](https://stackoverflow.com/questions/44081674/react-native-connection-has-no-connection-handler-error-meaning)
 
-
-
+### Building for Android
+These are loose instructions for building on Android. 
+[Read here](https://facebook.github.io/react-native/releases/0.24/docs/android-setup.html) for instructions on setting up an Android emulator.
+[Here you can find instructions](https://facebook.github.io/react-native/docs/running-on-device.html) for building and running on device over USB.
+*Note:* If on Windows, you may need to add Android tools and platform tools to your PATH in order to use utilities such as ```adb``` or ```avdmanager```. These tools are usually found in the ```Android/Sdk/tools```, ```Android/Sdk/tools/bin```, and ```Android/Sdk/platform-tools``` directories of your Android SDK installation directory.
 
 --------------
 
