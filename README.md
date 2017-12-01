@@ -9,11 +9,25 @@
 ### Hiding Warnings on iOS
 See this [Stack Overflow Post](https://stackoverflow.com/questions/44081674/react-native-connection-has-no-connection-handler-error-meaning)
 
-### Building for Android
+## Building for Android
 These are loose instructions for building on Android. 
+
 [Read here](https://facebook.github.io/react-native/releases/0.24/docs/android-setup.html) for instructions on setting up an Android emulator.
+
 [Here you can find instructions](https://facebook.github.io/react-native/docs/running-on-device.html) for building and running on device over USB.
+
 *Note:* If on Windows, you may need to add Android tools and platform tools to your PATH in order to use utilities such as ```adb``` or ```avdmanager```. These tools are usually found in the ```Android/Sdk/tools```, ```Android/Sdk/tools/bin```, and ```Android/Sdk/platform-tools``` directories of your Android SDK installation directory.
+
+This project requires node and npm. It is confirmed working on ```node v7.10.1``` and ```npm 4.2.0```.
+
+### Installing node dependencies
+- Install the react native command line with ```npm i -g react-native-cli```.
+- Install project dependencies by navigating to the project directory and running ```npm i```.
+- Create the Android build directory with ```react-native eject```.
+- Link native libraries with ```react-native-link```.
+- Build and run the app on your connected Android device with ```react-native run-android```.
+
+Build errors? Try running the commands in an administrative prompt. Otherwise, try navigating to the ```android``` app directory and running ```./gradlew clean```. If that doesn't work, open an issue with your error information.
 
 --------------
 
