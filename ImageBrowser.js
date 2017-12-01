@@ -21,7 +21,7 @@ const { width, height } = Dimensions.get('window')
 let styles
 class ImageBrowser extends React.Component {
   static navigationOptions = {
-    title: 'Unsplash Images',
+    title: 'Images',
   }
 
   state = {
@@ -35,34 +35,38 @@ class ImageBrowser extends React.Component {
   }
 
   fetchPhotos = () => {
-    this.setState({ loading: true })
-    fetch(`https://api.unsplash.com/photos/?page=${this.state.page}&per_page=30&client_id=${'a8091afbfe5113d97437ccb0d71689278a0caf9cb617f8205044aa9140aeb607'}`)
-      .then(res => res.json())
-      .then(images => {
-        this.state.images.push(...images)
-        console.log('this.state.images: ', this.state.images)
-        this.setState({ images: this.state.images, loading: false, page: this.state.page + 1 })
-      })
+    this.state.images = this.props.images
   }
 
-  saveToCameraRoll = (image) => {
-    if (Platform.OS === 'android') {
-      RNFetchBlob
-      .config({
-        fileCache : true,
-        appendExt : 'jpg'
-      })
-      .fetch('GET', image.urls.small)
-      .then((res) => {
-        CameraRoll.saveToCameraRoll(res.path())
-          .then(Alert.alert('Success', 'Photo added to camera roll!'))
-          .catch(err => console.log('err:', err))
-      })
-    } else {
-      CameraRoll.saveToCameraRoll(image.urls.small)
-        .then(Alert.alert('Success', 'Photo added to camera roll!'))
-    }
-  }
+  // fetchPhotos = () => {
+  //   this.setState({ loading: true })
+  //   fetch(`https://api.unsplash.com/photos/?page=${this.state.page}&per_page=30&client_id=${'a8091afbfe5113d97437ccb0d71689278a0caf9cb617f8205044aa9140aeb607'}`)
+  //     .then(res => res.json())
+  //     .then(images => {
+  //       this.state.images.push(...images)
+  //       console.log('this.state.images: ', this.state.images)
+  //       this.setState({ images: this.state.images, loading: false, page: this.state.page + 1 })
+  //     })
+  // }
+
+  // saveToCameraRoll = (image) => {
+  //   if (Platform.OS === 'android') {
+  //     RNFetchBlob
+  //     .config({
+  //       fileCache : true,
+  //       appendExt : 'jpg'
+  //     })
+  //     .fetch('GET', image.urls.small)
+  //     .then((res) => {
+  //       CameraRoll.saveToCameraRoll(res.path())
+  //         .then(Alert.alert('Success', 'Photo added to camera roll!'))
+  //         .catch(err => console.log('err:', err))
+  //     })
+  //   } else {
+  //     CameraRoll.saveToCameraRoll(image.urls.small)
+  //       .then(Alert.alert('Success', 'Photo added to camera roll!'))
+  //   }
+  // }
 
   render() {
     return (

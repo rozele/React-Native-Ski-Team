@@ -10,15 +10,15 @@ import NewRace                          from './NewRace'        ;
 import StartGateLineup                  from './StartGateLineup';
 
 const App = TabNavigator({
-    StartGateLineup : { screen: StartGateLineup },
-    NewRace         : { screen: NewRace         }, 
-    StartLineup     : { screen: StartLineup     }, 
-    HoleEntry       : { screen: HoleEntry       },
-    RaceInfo        : { screen: RaceInfo        },
+    // StartGateLineup : { screen: StartGateLineup },
+    // NewRace         : { screen: NewRace         }, 
+    // StartLineup     : { screen: StartLineup     }, 
+    // HoleEntry       : { screen: HoleEntry       },
+    // RaceInfo        : { screen: RaceInfo        },
     ImageCapture    : { screen: ImageCapture    },
-    // ScreenOne    : { screen: ScreenOne       },
-    // ImageBrowser : { screen: ImageBrowser    },
-    // DemoGallery  : { screen: DemoGallery     },
+    // ScreenOne       : { screen: ScreenOne       },
+    ImageBrowser    : { screen: ImageBrowser    },
+    // DemoGallery     : { screen: DemoGallery     },
 
   }, {
     tabBarOptions: { 

@@ -53,6 +53,7 @@ class ImageCapture extends Component {
       .then((data) => {
         console.log('image captured')
         console.log('image path: ', data)
+        
         this.setState({
           images: [...this.state.images, data]
         })
@@ -72,6 +73,11 @@ class ImageCapture extends Component {
           style  = {styles.preview}
           aspect = {Camera.constants.Aspect.fill}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>&#128247;</Text>
+          <Text style={styles.capture} onPress={() => 
+            navigate('ImageBrowser', { images: this.state.images }) }
+            >
+            Gal
+          </Text>
         </Camera>
       </View>
     );
