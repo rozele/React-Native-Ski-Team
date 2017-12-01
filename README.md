@@ -20,7 +20,7 @@ These are loose instructions for building on Android.
 
 This project requires node and npm. It is confirmed working on ```node v7.10.1``` and ```npm 4.2.0```.
 
-### Installing node dependencies
+### Installing node dependencies and building on your device
 - Install the react native command line with ```npm i -g react-native-cli```.
 - Install project dependencies by navigating to the project directory and running ```npm i```.
 - Create the Android build directory with ```react-native eject```.
