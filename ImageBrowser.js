@@ -18,10 +18,10 @@ import {
 import RNFetchBlob from 'react-native-fetch-blob'
 
 const { width, height } = Dimensions.get('window')
-let styles
+
 class ImageBrowser extends React.Component {
   static navigationOptions = {
-    title: 'Unsplash Images',
+    title: 'Image Browser',
   }
 
   state = {
@@ -30,58 +30,21 @@ class ImageBrowser extends React.Component {
     page: 1
   }
 
-  // componentDidMount() {
-  //   this.fetchPhotos()
-  // }
-
   fetchPhotos = () => {
+    console.log('props: ', this.props.navigation.state.params.images)    
     this.setState({images: this.props.navigation.state.params.images})
-    // this.setState({ loading: true })
-    // fetch(`https://api.unsplash.com/photos/?page=${this.state.page}&per_page=30&client_id=${'a8091afbfe5113d97437ccb0d71689278a0caf9cb617f8205044aa9140aeb607'}`)
-    //   .then(res => res.json())
-    //   .then(images => {
-    //     this.state.images.push(...images)
-    //     console.log('this.state.images: ', this.state.images)
-    //     this.setState({ images: this.state.images, loading: false, page: this.state.page + 1 })
-    //   })
-  }
-
-  logProps = () => {
-    console.log('props: ', this.props.navigation.state.params.images)
-    this.setState({images: this.props.navigation.state.params.images})
-  }
-
-  saveToCameraRoll = (image) => {
-    if (Platform.OS === 'android') {
-      RNFetchBlob
-      .config({
-        fileCache : true,
-        appendExt : 'jpg'
-      })
-      .fetch('GET', image.urls.small)
-      .then((res) => {
-        CameraRoll.saveToCameraRoll(res.path())
-          .then(Alert.alert('Success', 'Photo added to camera roll!'))
-          .catch(err => console.log('err:', err))
-      })
-    } else {
-      CameraRoll.saveToCameraRoll(image.urls.small)
-        .then(Alert.alert('Success', 'Photo added to camera roll!'))
-    }
   }
 
   render() {
     if (this.state.images.length < 1) {
       return (
         <View style={{flex: 1}}>
-          <Text style={styles.title}>Unsplash Images</Text>
           {
             this.state.loading ? (
               <Text style={{ padding: 10, textAlign: 'center' }}>Loading...</Text>
             ) : (
               <Button
-                // onPress={this.fetchPhotos}
-                onPress={this.logProps}
+                onPress={this.fetchPhotos}
                 title='View More'
               />
             )
@@ -92,14 +55,12 @@ class ImageBrowser extends React.Component {
     else {
       return (
         <View style={{flex: 1}}>
-          <Text style={styles.title}>Unsplash Images</Text>
           {
             this.state.loading ? (
               <Text style={{ padding: 10, textAlign: 'center' }}>Loading...</Text>
             ) : (
               <Button
-                // onPress={this.fetchPhotos}
-                onPress={this.logProps}
+                onPress={this.fetchPhotos}
                 title='View More'
               />
             )
@@ -108,16 +69,10 @@ class ImageBrowser extends React.Component {
             {
               this.state.images.map((image, i) => {
                 return (
-                  <TouchableHighlight
-                    key={i}
-                    onPress={() => this.saveToCameraRoll(image)}
-                    underlayColor='transparent'
-                  >
-                    <Image
-                      style={styles.image}
-                      source={{ uri: image.source }}
-                    />
-                  </TouchableHighlight>
+                  <Image
+                    style={styles.image}
+                    source={{ uri: image.source }}
+                  />
                 )
               })
             }
@@ -128,7 +83,7 @@ class ImageBrowser extends React.Component {
   }
 }
 
-styles = StyleSheet.create({
+const styles = StyleSheet.create({
   scrollContainer: {
     flexDirection: 'row',
     flexWrap: 'wrap'

@@ -5,18 +5,18 @@ import HoleLineup                       from './HoleLineup'     ;
 import ImageCapture                     from './ImageCapture'   ;
 import SplitLineup                      from './SplitLineup'    ;
 import FinishLineup                     from './FinishLineup'   ;
-// import ImageBrowser                     from './ImageBrowser'   ;
+import ImageBrowser                     from './ImageBrowser'   ;
 // import DemoGallery                      from './DemoGallery'    ;
 
 const App = TabNavigator({
     NewRace         : { screen: NewRace         }, 
     StartGateLineup : { screen: StartGateLineup },
     HoleLineup      : { screen: HoleLineup      },
-    ImageCapture    : { screen: ImageCapture    },
     SplitLineup     : { screen: SplitLineup     },
     FinishLineup    : { screen: FinishLineup    },
-    // ImageBrowser : { screen: ImageBrowser }
-    // DemoGallery  : { screen: DemoGallery  },
+    ImageCapture    : { screen: ImageCapture    },
+    ImageBrowser    : { screen: ImageBrowser    },
+    // DemoGallery     : { screen: DemoGallery     },
   }, {
     tabBarOptions: { 
       activeTintColor: '#7567B1',
