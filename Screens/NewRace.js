@@ -247,27 +247,3 @@ export default class NewRace extends Component {
     )
   }
 }
-
-const stylesObj = StyleSheet.create({
-    orange_box: {
-      backgroundColor: 'orange'
-    },
-    green_box: {
-      backgroundColor: 'green'
-    },
-    gray_box: {
-      backgroundColor: 'gray'
-    },
-    blue_box: {
-      backgroundColor: 'blue'
-    },
-    border_styles: {
-        width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight
-    }
-  });
-
-
-
-
-
-

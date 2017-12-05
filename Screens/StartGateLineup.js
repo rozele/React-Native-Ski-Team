@@ -132,7 +132,7 @@ export default class StartGateLineup extends Component {
             {/* --------- Column------------- */}
             <Col size={60} style = {{alignItems: 'center', justifyContent: 'center'}} >
                 <View style   = {{alignItems: 'center', justifyContent: 'center', paddingTop: 10}}>   
-                <Image source = {require ('./images/StartLineImg.jpg')}
+                <Image source = {require ('../images/StartLineImg.jpg')}
                        style  = {{ width: 300, height: 220}} 
                 />     
                 </View>    
@@ -251,7 +251,7 @@ export default class StartGateLineup extends Component {
             <Row  style={{justifyContent: 'center', margin: -20, paddingBottom: 6}}>
                 <View style={{justifyContent: 'center'}}>                   
                     <Button onPress={() => navigate('ImageCapture') }>
-                        <Image source = {require ('./images/CameraIcon.png')}
+                        <Image source = {require ('../images/CameraIcon.png')}
                             style  = {{ width: 70, height: 70, }}  />   
                     </Button>
                 </View>     
@@ -272,27 +272,3 @@ export default class StartGateLineup extends Component {
     )
   }
 }
-
-const stylesObj = StyleSheet.create({
-    orange_box: {
-      backgroundColor: 'orange'
-    },
-    green_box: {
-      backgroundColor: 'green'
-    },
-    gray_box: {
-      backgroundColor: 'gray'
-    },
-    blue_box: {
-      backgroundColor: 'blue'
-    },
-    border_styles: {
-        width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight
-    }
-  });
-
-
-
-
-
-
