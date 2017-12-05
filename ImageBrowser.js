@@ -26,23 +26,29 @@ class ImageBrowser extends React.Component {
 
   state = {
     images: [],
-    loading: true,
+    loading: false,
     page: 1
   }
 
-  componentDidMount() {
-    this.fetchPhotos()
-  }
+  // componentDidMount() {
+  //   this.fetchPhotos()
+  // }
 
   fetchPhotos = () => {
-    this.setState({ loading: true })
-    fetch(`https://api.unsplash.com/photos/?page=${this.state.page}&per_page=30&client_id=${'a8091afbfe5113d97437ccb0d71689278a0caf9cb617f8205044aa9140aeb607'}`)
-      .then(res => res.json())
-      .then(images => {
-        this.state.images.push(...images)
-        console.log('this.state.images: ', this.state.images)
-        this.setState({ images: this.state.images, loading: false, page: this.state.page + 1 })
-      })
+    this.setState({images: this.props.navigation.state.params.images})
+    // this.setState({ loading: true })
+    // fetch(`https://api.unsplash.com/photos/?page=${this.state.page}&per_page=30&client_id=${'a8091afbfe5113d97437ccb0d71689278a0caf9cb617f8205044aa9140aeb607'}`)
+    //   .then(res => res.json())
+    //   .then(images => {
+    //     this.state.images.push(...images)
+    //     console.log('this.state.images: ', this.state.images)
+    //     this.setState({ images: this.state.images, loading: false, page: this.state.page + 1 })
+    //   })
+  }
+
+  logProps = () => {
+    console.log('props: ', this.props.navigation.state.params.images)
+    this.setState({images: this.props.navigation.state.params.images})
   }
 
   saveToCameraRoll = (image) => {
@@ -65,39 +71,60 @@ class ImageBrowser extends React.Component {
   }
 
   render() {
-    return (
-      <View style={{flex: 1}}>
-        <Text style={styles.title}>Unsplash Images</Text>
-        {
-          this.state.loading ? (
-            <Text style={{ padding: 10, textAlign: 'center' }}>Loading...</Text>
-          ) : (
-            <Button
-              onPress={this.fetchPhotos}
-              title='View More'
-            />
-          )
-        }
-        <ScrollView contentContainerStyle={styles.scrollContainer}>
+    if (this.state.images.length < 1) {
+      return (
+        <View style={{flex: 1}}>
+          <Text style={styles.title}>Unsplash Images</Text>
           {
-            this.state.images.map((image, i) => {
-              return (
-                <TouchableHighlight
-                  key={i}
-                  onPress={() => this.saveToCameraRoll(image)}
-                  underlayColor='transparent'
-                >
-                  <Image
-                    style={styles.image}
-                    source={{ uri: image.urls.small }}
-                  />
-                </TouchableHighlight>
-              )
-            })
+            this.state.loading ? (
+              <Text style={{ padding: 10, textAlign: 'center' }}>Loading...</Text>
+            ) : (
+              <Button
+                // onPress={this.fetchPhotos}
+                onPress={this.logProps}
+                title='View More'
+              />
+            )
           }
-        </ScrollView>
-      </View>
-    )
+        </View>
+      )
+    }
+    else {
+      return (
+        <View style={{flex: 1}}>
+          <Text style={styles.title}>Unsplash Images</Text>
+          {
+            this.state.loading ? (
+              <Text style={{ padding: 10, textAlign: 'center' }}>Loading...</Text>
+            ) : (
+              <Button
+                // onPress={this.fetchPhotos}
+                onPress={this.logProps}
+                title='View More'
+              />
+            )
+          }
+          <ScrollView contentContainerStyle={styles.scrollContainer}>
+            {
+              this.state.images.map((image, i) => {
+                return (
+                  <TouchableHighlight
+                    key={i}
+                    onPress={() => this.saveToCameraRoll(image)}
+                    underlayColor='transparent'
+                  >
+                    <Image
+                      style={styles.image}
+                      source={{ uri: image.source }}
+                    />
+                  </TouchableHighlight>
+                )
+              })
+            }
+          </ScrollView>
+        </View>
+      )
+    }
   }
 }
 
