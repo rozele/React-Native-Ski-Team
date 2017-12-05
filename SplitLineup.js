@@ -12,7 +12,7 @@ import {
   ScrollView
 }                           from 'react-native'               ;
 
-export default class StartGateLineup extends Component {
+export default class SplitLineup extends Component {
   constructor(props) {
     super(props);
 
@@ -20,6 +20,8 @@ export default class StartGateLineup extends Component {
         nLane  : [1,2,3,4,5,6],
         bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
       };
+
+    
 
     // Modal options
     this.bibOpt  = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
@@ -97,7 +99,7 @@ export default class StartGateLineup extends Component {
    *  NavBar at bottom of screen
    */
   static navigationOptions = {
-    tabBarLabel: 'Start Gate',
+    tabBarLabel: 'Split Lineup',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
@@ -119,13 +121,17 @@ export default class StartGateLineup extends Component {
    * @param {*}      value - Currently selected item in array
    */
     _handleBibSelect(idx, value, nLane){
+        console.log(nLane);
+        // Store the bibCOl in an aarray, then loop
         this.state.bibCol[nLane -1 ] = value; 
-        this.state.nLane [nLane -1 ] = nLane;
+        this.state.nLane [nLane -1]  = nLane;
         this.bibOpt.splice(idx, 1);
         console.log('Bib selected ' + this.state.bibCol);
     }
 
   render() {
+    const { navigate } = this.props.navigation;
+    
         return (
             <Grid>
 
@@ -140,20 +146,8 @@ export default class StartGateLineup extends Component {
             <Row>
                 <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                     <ModalDropdown
-                        defaultValue      = "Lane 1"
+                        defaultValue      = "1st"
                         onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 1)}
-                        options           = {this.bibOpt}
-                        dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
-                        textStyle         = {{fontSize: 14, textAlign: 'center', }}
-                        style             = {{justifyContent: "center", alignItems: "center", width: 55,
-                                              margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
-                        dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
-                    />
-                </Col>
-                <Col style={{justifyContent: 'center', alignItems: 'center'}}>
-                    <ModalDropdown
-                        defaultValue      = "Lane 2"
-                        onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 2)}
                         options           = {this.bibOpt}
                         dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
                         textStyle         = {{fontSize: 14, textAlign: 'center', }}
@@ -161,10 +155,22 @@ export default class StartGateLineup extends Component {
                                             margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
                         dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
                     />
+                </Col>
+                <Col style={{justifyContent: 'center', alignItems: 'center'}}>
+                        <ModalDropdown
+                            defaultValue      = "2nd"
+                            onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 2)}
+                            options           = {this.bibOpt}
+                            dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
+                            textStyle         = {{fontSize: 14, textAlign: 'center', }}
+                            style             = {{justifyContent: "center", alignItems: "center", width: 55,
+                                                margin: this.nTextBoxMargin,  borderColor: this.sBorderColor, borderWidth: this.nBorderWidth,  height:this.nLaneBtnHeight}}
+                            dropdownTextStyle = {{fontSize: this.nModalFontSize, color: 'black'}} 
+                        />
                     </Col>
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
-                            defaultValue      = "Lane 3"
+                            defaultValue      = "3rd"
                             onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 3)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
@@ -176,7 +182,7 @@ export default class StartGateLineup extends Component {
                     </Col>
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
-                            defaultValue      = "Lane 4"
+                            defaultValue      = "4th"
                             onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 4)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
@@ -188,7 +194,7 @@ export default class StartGateLineup extends Component {
                     </Col>  
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
-                            defaultValue      = "Lane 5"
+                            defaultValue      = "5th"
                             onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 5)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 280}}        
@@ -200,7 +206,7 @@ export default class StartGateLineup extends Component {
                     </Col>
                     <Col style={{justifyContent: 'center', alignItems: 'center'}}>
                         <ModalDropdown
-                            defaultValue      = "Lane 6"
+                            defaultValue      = "6th"
                             onSelect          = {(idx, value) => this._handleBibSelect(idx, value, 6)}
                             options           = {this.bibOpt}
                             dropdownStyle     = {{padding: this.nModalPadding, margin: this.nModalMargin, height: 3280}}        
@@ -218,7 +224,7 @@ export default class StartGateLineup extends Component {
             <Row style={{alignItems: 'center', justifyContent: 'center', margin:-20}}>
                 <View>
                     <Text style = {{fontSize: 30}}> 
-                        Start Gate Line Up
+                        Split #1 Line Up
                         </Text>
                 </View>
             </Row>
@@ -249,12 +255,12 @@ export default class StartGateLineup extends Component {
                 </Col>
             </Row>
             <Row  style={{justifyContent: 'center', margin: -20, paddingBottom: 6}}>
-                <View style={{justifyContent: 'center'}}>                   
-                    <Button onPress={() => navigate('ImageCapture') }>
-                        <Image source = {require ('./images/CameraIcon.png')}
-                            style  = {{ width: 70, height: 70, }}  />   
-                    </Button>
-                </View>     
+            <View style={{justifyContent: 'center'}}>                   
+                <Button onPress={() => navigate('ImageCapture') }>
+                    <Image source = {require ('./images/CameraIcon.png')}
+                           style  = {{ width: 70, height: 70, }}  />   
+              </Button>
+            </View>     
             </Row>   
             <Row style={{justifyContent: 'center', margin: -10}}>
             <View style={{alignItems: 'flex-end'}}>

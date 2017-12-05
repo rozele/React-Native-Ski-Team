@@ -37,7 +37,7 @@ class ImageCapture extends Component {
   }
 
   static navigationOptions = {
-    tabBarLabel: 'Camera',
+    tabBarLabel: 'Cam',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}

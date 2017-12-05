@@ -1,25 +1,22 @@
 import { StackNavigator, TabNavigator } from 'react-navigation' ;
-import RaceInfo                         from './RaceInfo'       ;
-import ScreenOne                        from './ScreenOne'      ;
-import StartLineup                      from './StartLineup'    ;
-import HoleEntry                        from './HoleEntry'      ;
-import DemoGallery                      from './DemoGallery'    ;
-import ImageCapture                     from './ImageCapture'   ;
-import ImageBrowser                     from './ImageBrowser'   ;
 import NewRace                          from './NewRace'        ;
 import StartGateLineup                  from './StartGateLineup';
+import HoleLineup                       from './HoleLineup'     ;
+import ImageCapture                     from './ImageCapture'   ;
+import SplitLineup                      from './SplitLineup'    ;
+import FinishLineup                     from './FinishLineup'   ;
+// import ImageBrowser                     from './ImageBrowser'   ;
+// import DemoGallery                      from './DemoGallery'    ;
 
-const App = StackNavigator({
-    // StartGateLineup : { screen: StartGateLineup },
-    // NewRace         : { screen: NewRace         }, 
-    // StartLineup     : { screen: StartLineup     }, 
-    // HoleEntry       : { screen: HoleEntry       },
-    // RaceInfo        : { screen: RaceInfo        },
+const App = TabNavigator({
+    NewRace         : { screen: NewRace         }, 
+    StartGateLineup : { screen: StartGateLineup },
+    HoleLineup      : { screen: HoleLineup      },
     ImageCapture    : { screen: ImageCapture    },
-    // ScreenOne       : { screen: ScreenOne       },
-    ImageBrowser    : { screen: ImageBrowser    },
-    // DemoGallery     : { screen: DemoGallery     },
-
+    SplitLineup     : { screen: SplitLineup     },
+    FinishLineup    : { screen: FinishLineup    },
+    // ImageBrowser : { screen: ImageBrowser }
+    // DemoGallery  : { screen: DemoGallery  },
   }, {
     tabBarOptions: { 
       activeTintColor: '#7567B1',
