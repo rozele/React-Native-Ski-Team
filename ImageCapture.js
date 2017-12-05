@@ -57,13 +57,13 @@ class ImageCapture extends Component {
         this.setState({
           images: [...this.state.images,
                     {
-                      caption:  this.state.images.length,
-                      source:   { uri: data.mediaUri },
-                      dimensions: { width: 500, height: 500 }
+                      caption   :  this.state.images.length,
+                      source    :  data.mediaUri,
+                      dimensions:  { width: 500, height: 500 }
                     }
                   ]
         })
-        console.log('captured images:\n', JSON.stringify(this.state.images, null, 2))
+        console.log('captured images:', this.state.images)
       })
       .catch(err   => console.error(err));
   }

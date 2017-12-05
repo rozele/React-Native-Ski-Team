@@ -9,7 +9,7 @@ import ImageBrowser                     from './ImageBrowser'   ;
 import NewRace                          from './NewRace'        ;
 import StartGateLineup                  from './StartGateLineup';
 
-const App = TabNavigator({
+const App = StackNavigator({
     // StartGateLineup : { screen: StartGateLineup },
     // NewRace         : { screen: NewRace         }, 
     // StartLineup     : { screen: StartLineup     }, 
