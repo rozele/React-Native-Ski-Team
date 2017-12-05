@@ -37,9 +37,9 @@ class ImageCapture extends Component {
         this.setState({
           images: [...this.state.images,
                     {
-                      caption   :  this.state.images.length,
+                      key   :  this.state.images.length,
                       source    :  data.mediaUri,
-                      dimensions:  { width: 500, height: 500 }
+                      //dimensions:  { width: 500, height: 500 }
                     }
                   ]
         })

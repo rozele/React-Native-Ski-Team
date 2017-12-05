@@ -5,7 +5,8 @@ import HoleLineup                       from './HoleLineup'     ;
 import ImageCapture                     from './ImageCapture'   ;
 import SplitLineup                      from './SplitLineup'    ;
 import FinishLineup                     from './FinishLineup'   ;
-import ImageBrowser                     from './ImageBrowser'   ;
+import ImageNavigator                   from './ImageNavigator' ;
+// import ImageBrowser                     from './ImageBrowser'   ;
 // import DemoGallery                      from './DemoGallery'    ;
 
 const App = TabNavigator({
@@ -14,8 +15,9 @@ const App = TabNavigator({
     HoleLineup      : { screen: HoleLineup      },
     SplitLineup     : { screen: SplitLineup     },
     FinishLineup    : { screen: FinishLineup    },
-    ImageCapture    : { screen: ImageCapture    },
-    ImageBrowser    : { screen: ImageBrowser    },
+    ImageNavigator  : { screen: ImageNavigator  },
+    // ImageCapture    : { screen: ImageCapture    },
+    // ImageBrowser    : { screen: ImageBrowser    },
     // DemoGallery     : { screen: DemoGallery     },
   }, {
     tabBarOptions: { 
