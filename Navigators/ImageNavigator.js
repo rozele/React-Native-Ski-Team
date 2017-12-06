@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { TouchableOpacity } from 'react-native';
 import { StackNavigator} from 'react-navigation'
-import ImageCapture from './ImageCapture';
-import ImageBrowser from './ImageBrowser';
+import ImageCapture from '../Screens/ImageCapture';
+import ImageBrowser from '../Screens/ImageBrowser';
 
 const ImageNavigator = StackNavigator({
     ImageCapture: {
