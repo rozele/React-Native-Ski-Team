@@ -14,6 +14,8 @@ const CameraNavigator = StackNavigator({
         title: "Image Capture",
       })
     }
+  }, {
+    headerMode: 'none'
   })
 
 export default CameraNavigator
