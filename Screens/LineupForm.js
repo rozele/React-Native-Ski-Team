@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import Button               from 'react-native-button'
-import ModalDropdown        from 'react-native-modal-dropdown'
-import { Col, Row, Grid }   from 'react-native-easy-grid'
+import Button from 'react-native-button'
+import ModalDropdown from 'react-native-modal-dropdown'
+import { Col, Row, Grid } from 'react-native-easy-grid'
 import {
   StyleSheet,
   TouchableHighlight,
@@ -9,9 +9,8 @@ import {
   View,
   Image,
   ScrollView
-}                           from 'react-native'
-import styles               from '../Styles/LineupFormStyles'
-
+} from 'react-native'
+import styles from '../Styles/LineupFormStyles'
 
 class LineupForm extends Component {
   constructor(props) {
@@ -103,7 +102,7 @@ class LineupForm extends Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation;
+    const { navigate } = this.props.navigation
     return (
       <Grid>
         {/* --------- Column------------- */}
