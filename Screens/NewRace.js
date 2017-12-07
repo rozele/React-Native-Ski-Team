@@ -10,7 +10,7 @@ import {
   View,
   Image,
   ScrollView
-} from 'react-native'
+}                           from 'react-native'
 import styles               from './../Styles/NewRaceStyles'
 
 class NewRace extends Component {

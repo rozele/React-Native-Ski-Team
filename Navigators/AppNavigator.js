@@ -3,11 +3,19 @@ import { TouchableOpacity } from 'react-native'
 import { StackNavigator }   from 'react-navigation'
 import FormNavigator        from './FormNavigator'
 import ImageCapture         from '../Screens/ImageCapture'
+import LineupForm           from '../Screens/LineupForm'
+import NewRace              from '../Screens/NewRace'
 
-const CameraNavigator = StackNavigator({
+const AppNavigator = StackNavigator({
   FormNavigator: {
     screen: FormNavigator
   },
+  // NewRace: {
+  //   screen: NewRace
+  // },
+  // LineupForm: {
+  //   screen: LineupForm
+  // },
   ImageCapture: {
     screen: ImageCapture,
     navigationOptions: (props) => ({
@@ -18,4 +26,4 @@ const CameraNavigator = StackNavigator({
   headerMode: 'none'
 })
 
-export default CameraNavigator
+export default AppNavigator

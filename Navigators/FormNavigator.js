@@ -10,12 +10,17 @@ import StartGateLineup      from '../Screens/StartGateLineup'
 import ImageNavigator       from '../Navigators/ImageNavigator'
 
 const FormNavigator = TabNavigator({
-  NewRace         : { screen: NewRace         },
-  // LineupForm      : { screen: LineupForm      },
-  StartGateLineup : { screen: StartGateLineup },
-  HoleLineup      : { screen: HoleLineup      },
-  SplitLineup     : { screen: SplitLineup     },
-  FinishLineup    : { screen: FinishLineup    },
+  // NewRace         : { screen: NewRace         },
+  StartGateLineup_ : { screen: StartGateLineup },
+  StartGateLineup: {
+    screen: LineupForm,
+    navigationOptions: ({navigation}) => ({
+      title: 'Start Gate'
+    })
+  },
+  // HoleLineup      : { screen: HoleLineup      },
+  // SplitLineup     : { screen: SplitLineup     },
+  // FinishLineup    : { screen: FinishLineup    },
   // ImageNavigator  : { screen: ImageNavigator  },
 }, {
   tabBarOptions: {

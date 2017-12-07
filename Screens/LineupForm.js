@@ -73,20 +73,21 @@ class LineupForm extends Component {
   /**
    *  NavBar at bottom of screen
    */
-  static navigationOptions = {
-    tabBarLabel: 'FORMVAR',
-    // tabBarIcon: ({ tintColor }) => (
-    //   <Image
-    //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
-    //     style={[styles.icon, { tintColor: tintColor }]}
-    //   />
-    // )
-  }
+  // static navigationOptions = {
+  //   tabBarLabel: 'FORMVAR',
+  //   // tabBarIcon: ({ tintColor }) => (
+  //   //   <Image
+  //   //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
+  //   //     style={[styles.icon, { tintColor: tintColor }]}
+  //   //   />
+  //   // )
+  // }
 
   // Event Handlers
   // --------------------------------------------------
   _handleBtnPress() {
-    this.postDataToAzureFuncAsync()
+    //this.postDataToAzureFuncAsync()
+    console.log(this.props)
   }
 
   /**
