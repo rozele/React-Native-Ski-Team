@@ -12,7 +12,7 @@ import {
   ScrollView
 }                           from 'react-native'               ;
 
-export default class FinishLineup extends Component {
+export default class HoleLineup extends Component {
   constructor(props) {
     super(props);
 
@@ -20,8 +20,6 @@ export default class FinishLineup extends Component {
         nLane  : [1,2,3,4,5,6],
         bibCol : ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ]
       };
-
-    
 
     // Modal options
     this.bibOpt  = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black' ];
@@ -99,7 +97,7 @@ export default class FinishLineup extends Component {
    *  NavBar at bottom of screen
    */
   static navigationOptions = {
-    tabBarLabel: 'Finish',
+    tabBarLabel: 'Hole Lineup',
     // tabBarIcon: ({ tintColor }) => (
     //   <Image
     //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
@@ -138,7 +136,7 @@ export default class FinishLineup extends Component {
             {/* --------- Column------------- */}
             <Col size={60} style = {{alignItems: 'center', justifyContent: 'center'}} >
                 <View style   = {{alignItems: 'center', justifyContent: 'center', paddingTop: 10}}>   
-                <Image source = {require ('./images/StartLineImg.jpg')}
+                <Image source = {require ('../images/StartLineImg.jpg')}
                        style  = {{ width: 300, height: 220}} 
                 />     
                 </View>    
@@ -224,7 +222,7 @@ export default class FinishLineup extends Component {
             <Row style={{alignItems: 'center', justifyContent: 'center', margin:-20}}>
                 <View>
                     <Text style = {{fontSize: 30}}> 
-                        Finish Line Up
+                        Hole Line Up
                         </Text>
                 </View>
             </Row>
@@ -257,7 +255,7 @@ export default class FinishLineup extends Component {
             <Row  style={{justifyContent: 'center', margin: -20, paddingBottom: 6}}>
             <View style={{justifyContent: 'center'}}>                   
                 <Button onPress={() => navigate('ImageCapture') }>
-                    <Image source = {require ('./images/CameraIcon.png')}
+                    <Image source = {require ('../images/CameraIcon.png')}
                            style  = {{ width: 70, height: 70, }}  />   
               </Button>
             </View>     
@@ -278,27 +276,3 @@ export default class FinishLineup extends Component {
     )
   }
 }
-
-const stylesObj = StyleSheet.create({
-    orange_box: {
-      backgroundColor: 'orange'
-    },
-    green_box: {
-      backgroundColor: 'green'
-    },
-    gray_box: {
-      backgroundColor: 'gray'
-    },
-    blue_box: {
-      backgroundColor: 'blue'
-    },
-    border_styles: {
-        width: this.nModalWidth, margin: this.nMargin, borderWidth: this.borderWidth, borderColor: this.sBorderColor, borderWidth: this.nBorderWidth, padding:10, height:this.nHeight
-    }
-  });
-
-
-
-
-
-
