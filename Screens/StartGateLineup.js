@@ -1,5 +1,4 @@
 import React, { Component } from 'react'                      ;
-import styles               from './styles'                   ;
 import Button               from 'react-native-button'        ;
 import ModalDropdown        from 'react-native-modal-dropdown';
 import { Col, Row, Grid }   from 'react-native-easy-grid'     ;
@@ -11,6 +10,7 @@ import {
   Image             ,
   ScrollView
 }                           from 'react-native'               ;
+import styles               from '../Styles/LineupFormStyles' ;
 
 export default class StartGateLineup extends Component {
   constructor(props) {

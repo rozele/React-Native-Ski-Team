@@ -11,11 +11,11 @@ import ImageNavigator       from '../Navigators/ImageNavigator'
 
 const FormNavigator = TabNavigator({
   NewRace         : { screen: NewRace         },
-  LineupForm      : { screen: LineupForm      },
-  // StartGateLineup : { screen: StartGateLineup },
-  // HoleLineup      : { screen: HoleLineup      },
-  // SplitLineup     : { screen: SplitLineup     },
-  // FinishLineup    : { screen: FinishLineup    },
+  // LineupForm      : { screen: LineupForm      },
+  StartGateLineup : { screen: StartGateLineup },
+  HoleLineup      : { screen: HoleLineup      },
+  SplitLineup     : { screen: SplitLineup     },
+  FinishLineup    : { screen: FinishLineup    },
   // ImageNavigator  : { screen: ImageNavigator  },
 }, {
   tabBarOptions: {
