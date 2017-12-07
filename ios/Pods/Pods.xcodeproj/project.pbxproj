@@ -1,0 +1,725 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		08D33768753E30743E261D79666517F6 /* Pods-SkiAppTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2A46AE215863FA0A235E3CFFCCC569FC /* Pods-SkiAppTests-dummy.m */; };
+		18DE6EFC62C06095401E4EA2E94798C5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */; };
+		3DDE11F90C20E493FA14EA5BCFBE0152 /* Pods-SkiApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 79CD2364B7CED4CABD5BD5D1ECC98448 /* Pods-SkiApp-dummy.m */; };
+		53E390C536BFB676FC0FBEFBB9BEE0F9 /* Pods-SkiApp-tvOSTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8F1D54858FE7AF744410ECA9462CF7BB /* Pods-SkiApp-tvOSTests-dummy.m */; };
+		64A73C7EBA9BC95DD0F365D2EED01541 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */; };
+		719225C9BB71A0609132E0FEC93E4610 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */; };
+		8D5579C0C641746483970B2E0AB1CC6C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */; };
+		DAC85451CBB3CD71EEE6D1CFF34DD45D /* Pods-SkiApp-tvOS-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9C72BF7FB926D9ACD196844C170911A1 /* Pods-SkiApp-tvOS-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		221D9E2D959172781887CCD4E437AD55 /* Pods-SkiApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		25F7139B485731743F7B753D09B789FA /* Pods-SkiApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-frameworks.sh"; sourceTree = "<group>"; };
+		2A46AE215863FA0A235E3CFFCCC569FC /* Pods-SkiAppTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkiAppTests-dummy.m"; sourceTree = "<group>"; };
+		2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		2ED9598388B42B2025F8529A5EEBD4A2 /* AppCenter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenter.framework; path = "AppCenter-SDK-Apple/iOS/AppCenter.framework"; sourceTree = "<group>"; };
+		2FDEED84DA52097213DF0B659D0DFDA3 /* Pods-SkiApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkiApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		3F60B8C3A0EFF708EA70518A32F6E1EF /* Pods-SkiApp-tvOSTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-tvOSTests-frameworks.sh"; sourceTree = "<group>"; };
+		44B01460609B423E7E68E7B2301A9039 /* Pods-SkiApp-tvOS-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-tvOS-frameworks.sh"; sourceTree = "<group>"; };
+		4D96525D4E0F01EFB767C4777B4168DB /* Pods-SkiApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5128F46A11B119351F476C7DD4AAE3E4 /* AppCenterReactNativeShared.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppCenterReactNativeShared.framework; path = AppCenterReactNativeShared/AppCenterReactNativeShared.framework; sourceTree = "<group>"; };
+		572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS10.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		58D3B59B75998D2375099ACB7EFEC50E /* Pods-SkiApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkiApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		5FDADEDD0800EEB990B037D7EE715F5A /* Pods-SkiApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		6396629DFAF9EDB08E00B4294734F63E /* Pods-SkiAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		64DAAF3DD4D858F6E89EAF1A94CC6BAA /* Pods-SkiAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		66C581A10681F250E0FC1653625C1E89 /* Pods-SkiApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp.release.xcconfig"; sourceTree = "<group>"; };
+		674740180381AAD22B95E93A3213BA2E /* Pods-SkiApp-tvOS-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-tvOS-resources.sh"; sourceTree = "<group>"; };
+		6AFC8D647BC5B8816A7958CF6BFCD3FD /* Pods-SkiApp-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-resources.sh"; sourceTree = "<group>"; };
+		6B0E3C29BEC8A17A623EDE311D529DC1 /* Pods-SkiAppTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkiAppTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		79CD2364B7CED4CABD5BD5D1ECC98448 /* Pods-SkiApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkiApp-dummy.m"; sourceTree = "<group>"; };
+		8754BEDEF114F8348DFB7A0082AF81E9 /* Pods-SkiAppTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiAppTests-resources.sh"; sourceTree = "<group>"; };
+		8A42D3433537965428B61322A2622AC1 /* Pods-SkiAppTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiAppTests-frameworks.sh"; sourceTree = "<group>"; };
+		8F1D54858FE7AF744410ECA9462CF7BB /* Pods-SkiApp-tvOSTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkiApp-tvOSTests-dummy.m"; sourceTree = "<group>"; };
+		8F805C42BB756AA7778CAFF9AF3ECE21 /* libPods-SkiApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SkiApp-tvOS.a"; path = "libPods-SkiApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92740467475E3348BBD279C5FCD10631 /* Pods-SkiApp-tvOSTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkiApp-tvOSTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		954EE95A5604E917174784E3C40234B9 /* libPods-SkiApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SkiApp-tvOSTests.a"; path = "libPods-SkiApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		982C6FA222CF3553DE8A029C69777479 /* libPods-SkiApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SkiApp.a"; path = "libPods-SkiApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		98CAAB0A600DC43AABA53741A9938D7D /* Pods-SkiApp-tvOS-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkiApp-tvOS-acknowledgements.plist"; sourceTree = "<group>"; };
+		9C72BF7FB926D9ACD196844C170911A1 /* Pods-SkiApp-tvOS-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SkiApp-tvOS-dummy.m"; sourceTree = "<group>"; };
+		AEB1B3C53FC6534F450CD346C3767597 /* Pods-SkiAppTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkiAppTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		C745F34511155D2C985906735D2AE4D9 /* Pods-SkiApp-tvOS-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SkiApp-tvOS-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D6093F91B44FAB1898454B696AE90404 /* Pods-SkiApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D67505DFC35C6AFA295E95E9B7375366 /* libPods-SkiAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-SkiAppTests.a"; path = "libPods-SkiAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D95FE3B128AAD6770D8583F48875C710 /* Pods-SkiApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SkiApp.debug.xcconfig"; sourceTree = "<group>"; };
+		F79ADDB99EC9E6F1374F413B67C6C8DC /* Pods-SkiApp-tvOSTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SkiApp-tvOSTests-resources.sh"; sourceTree = "<group>"; };
+		FFCAD6A8F4439DC2D9C3C0AE3828E74B /* Pods-SkiApp-tvOSTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SkiApp-tvOSTests-acknowledgements.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5762765AB0013A1B12AAEAE02559DF0C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18DE6EFC62C06095401E4EA2E94798C5 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B49AA2A4FD56678D4342E6D7E14C33AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8D5579C0C641746483970B2E0AB1CC6C /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC70F386CC040A692993FC3E19E2F7AC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				719225C9BB71A0609132E0FEC93E4610 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6D7143114F3F5E12465DA6352080F52 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64A73C7EBA9BC95DD0F365D2EED01541 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		084F8754CADD03D95E10FAD4902E445E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5128F46A11B119351F476C7DD4AAE3E4 /* AppCenterReactNativeShared.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1859EB73EB792217BC056A26BA78D465 /* Pods-SkiApp */ = {
+			isa = PBXGroup;
+			children = (
+				2FDEED84DA52097213DF0B659D0DFDA3 /* Pods-SkiApp-acknowledgements.markdown */,
+				58D3B59B75998D2375099ACB7EFEC50E /* Pods-SkiApp-acknowledgements.plist */,
+				79CD2364B7CED4CABD5BD5D1ECC98448 /* Pods-SkiApp-dummy.m */,
+				25F7139B485731743F7B753D09B789FA /* Pods-SkiApp-frameworks.sh */,
+				6AFC8D647BC5B8816A7958CF6BFCD3FD /* Pods-SkiApp-resources.sh */,
+				D95FE3B128AAD6770D8583F48875C710 /* Pods-SkiApp.debug.xcconfig */,
+				66C581A10681F250E0FC1653625C1E89 /* Pods-SkiApp.release.xcconfig */,
+			);
+			name = "Pods-SkiApp";
+			path = "Target Support Files/Pods-SkiApp";
+			sourceTree = "<group>";
+		};
+		20F731AE46C73F232AF0C168DC383CF9 /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				572DBE63D5360AB71E5F80F979738FD0 /* Foundation.framework */,
+			);
+			name = tvOS;
+			sourceTree = "<group>";
+		};
+		232AA0911793C6F97279E9C640EEB51B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1859EB73EB792217BC056A26BA78D465 /* Pods-SkiApp */,
+				BC4A28FCB7A6D7C449B5D52D3280DB16 /* Pods-SkiApp-tvOS */,
+				535890F3AF46ED2383BDFCF68CF6C13C /* Pods-SkiApp-tvOSTests */,
+				AA142BB99D2733490AF18B0F32FFD683 /* Pods-SkiAppTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4A1B657DA6733FDFE6BEBD089CE1D601 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FD0616D0E8D3AF99A06372DF9D9C747A /* AppCenter */,
+				EAD746AE39BEE1D0267C9F133325ED44 /* AppCenterReactNativeShared */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		535890F3AF46ED2383BDFCF68CF6C13C /* Pods-SkiApp-tvOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				92740467475E3348BBD279C5FCD10631 /* Pods-SkiApp-tvOSTests-acknowledgements.markdown */,
+				FFCAD6A8F4439DC2D9C3C0AE3828E74B /* Pods-SkiApp-tvOSTests-acknowledgements.plist */,
+				8F1D54858FE7AF744410ECA9462CF7BB /* Pods-SkiApp-tvOSTests-dummy.m */,
+				3F60B8C3A0EFF708EA70518A32F6E1EF /* Pods-SkiApp-tvOSTests-frameworks.sh */,
+				F79ADDB99EC9E6F1374F413B67C6C8DC /* Pods-SkiApp-tvOSTests-resources.sh */,
+				4D96525D4E0F01EFB767C4777B4168DB /* Pods-SkiApp-tvOSTests.debug.xcconfig */,
+				D6093F91B44FAB1898454B696AE90404 /* Pods-SkiApp-tvOSTests.release.xcconfig */,
+			);
+			name = "Pods-SkiApp-tvOSTests";
+			path = "Target Support Files/Pods-SkiApp-tvOSTests";
+			sourceTree = "<group>";
+		};
+		58996781A54EE964D7111D73083A18A5 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				2D154F4805B9715F0E6D79B0363CE280 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		5F5868CECEF7492F31537F201885EC0A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2ED9598388B42B2025F8529A5EEBD4A2 /* AppCenter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		683F366D71F53EAB1B6728559B237FAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				982C6FA222CF3553DE8A029C69777479 /* libPods-SkiApp.a */,
+				8F805C42BB756AA7778CAFF9AF3ECE21 /* libPods-SkiApp-tvOS.a */,
+				954EE95A5604E917174784E3C40234B9 /* libPods-SkiApp-tvOSTests.a */,
+				D67505DFC35C6AFA295E95E9B7375366 /* libPods-SkiAppTests.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				A42F72DC1D780481325DD00969B19BB6 /* Frameworks */,
+				4A1B657DA6733FDFE6BEBD089CE1D601 /* Pods */,
+				683F366D71F53EAB1B6728559B237FAE /* Products */,
+				232AA0911793C6F97279E9C640EEB51B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		9CA3EEA9A5D9914710449AD90DBDC294 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				5F5868CECEF7492F31537F201885EC0A /* Frameworks */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		A42F72DC1D780481325DD00969B19BB6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				58996781A54EE964D7111D73083A18A5 /* iOS */,
+				20F731AE46C73F232AF0C168DC383CF9 /* tvOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AA142BB99D2733490AF18B0F32FFD683 /* Pods-SkiAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B0E3C29BEC8A17A623EDE311D529DC1 /* Pods-SkiAppTests-acknowledgements.markdown */,
+				AEB1B3C53FC6534F450CD346C3767597 /* Pods-SkiAppTests-acknowledgements.plist */,
+				2A46AE215863FA0A235E3CFFCCC569FC /* Pods-SkiAppTests-dummy.m */,
+				8A42D3433537965428B61322A2622AC1 /* Pods-SkiAppTests-frameworks.sh */,
+				8754BEDEF114F8348DFB7A0082AF81E9 /* Pods-SkiAppTests-resources.sh */,
+				64DAAF3DD4D858F6E89EAF1A94CC6BAA /* Pods-SkiAppTests.debug.xcconfig */,
+				6396629DFAF9EDB08E00B4294734F63E /* Pods-SkiAppTests.release.xcconfig */,
+			);
+			name = "Pods-SkiAppTests";
+			path = "Target Support Files/Pods-SkiAppTests";
+			sourceTree = "<group>";
+		};
+		BC4A28FCB7A6D7C449B5D52D3280DB16 /* Pods-SkiApp-tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				C745F34511155D2C985906735D2AE4D9 /* Pods-SkiApp-tvOS-acknowledgements.markdown */,
+				98CAAB0A600DC43AABA53741A9938D7D /* Pods-SkiApp-tvOS-acknowledgements.plist */,
+				9C72BF7FB926D9ACD196844C170911A1 /* Pods-SkiApp-tvOS-dummy.m */,
+				44B01460609B423E7E68E7B2301A9039 /* Pods-SkiApp-tvOS-frameworks.sh */,
+				674740180381AAD22B95E93A3213BA2E /* Pods-SkiApp-tvOS-resources.sh */,
+				5FDADEDD0800EEB990B037D7EE715F5A /* Pods-SkiApp-tvOS.debug.xcconfig */,
+				221D9E2D959172781887CCD4E437AD55 /* Pods-SkiApp-tvOS.release.xcconfig */,
+			);
+			name = "Pods-SkiApp-tvOS";
+			path = "Target Support Files/Pods-SkiApp-tvOS";
+			sourceTree = "<group>";
+		};
+		EAD746AE39BEE1D0267C9F133325ED44 /* AppCenterReactNativeShared */ = {
+			isa = PBXGroup;
+			children = (
+				084F8754CADD03D95E10FAD4902E445E /* Frameworks */,
+			);
+			name = AppCenterReactNativeShared;
+			path = AppCenterReactNativeShared;
+			sourceTree = "<group>";
+		};
+		FD0616D0E8D3AF99A06372DF9D9C747A /* AppCenter */ = {
+			isa = PBXGroup;
+			children = (
+				9CA3EEA9A5D9914710449AD90DBDC294 /* Core */,
+			);
+			name = AppCenter;
+			path = AppCenter;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		05B4073C8E8A07AE7FC4CFB703DCE041 /* Pods-SkiAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 12BAA209033644D335E00629F78A4110 /* Build configuration list for PBXNativeTarget "Pods-SkiAppTests" */;
+			buildPhases = (
+				03AF776B41BC6E76A21A1E410F8CA92D /* Sources */,
+				BC70F386CC040A692993FC3E19E2F7AC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SkiAppTests";
+			productName = "Pods-SkiAppTests";
+			productReference = D67505DFC35C6AFA295E95E9B7375366 /* libPods-SkiAppTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		1661A19A78DBB29A29CC12A8D9318FEF /* Pods-SkiApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B0314C64B586D299198AA289180C508 /* Build configuration list for PBXNativeTarget "Pods-SkiApp" */;
+			buildPhases = (
+				9C4B0200499F66BFEBBBA0525FE840D1 /* Sources */,
+				5762765AB0013A1B12AAEAE02559DF0C /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SkiApp";
+			productName = "Pods-SkiApp";
+			productReference = 982C6FA222CF3553DE8A029C69777479 /* libPods-SkiApp.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		B986A076AACD93DEEB14747333CFA9E0 /* Pods-SkiApp-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2FBD4B76C9AB02694962F40C262C1384 /* Build configuration list for PBXNativeTarget "Pods-SkiApp-tvOS" */;
+			buildPhases = (
+				85F6A901627A2E686CCEB05DE299D3C7 /* Sources */,
+				B49AA2A4FD56678D4342E6D7E14C33AE /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SkiApp-tvOS";
+			productName = "Pods-SkiApp-tvOS";
+			productReference = 8F805C42BB756AA7778CAFF9AF3ECE21 /* libPods-SkiApp-tvOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CC9876951815BDDE87EA4C40EDFA05F7 /* Pods-SkiApp-tvOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AF769B865C65EA7C318F185D92ADFEA2 /* Build configuration list for PBXNativeTarget "Pods-SkiApp-tvOSTests" */;
+			buildPhases = (
+				C7D65A0E5D394BFBD03CB0929AB71ED4 /* Sources */,
+				C6D7143114F3F5E12465DA6352080F52 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-SkiApp-tvOSTests";
+			productName = "Pods-SkiApp-tvOSTests";
+			productReference = 954EE95A5604E917174784E3C40234B9 /* libPods-SkiApp-tvOSTests.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 683F366D71F53EAB1B6728559B237FAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1661A19A78DBB29A29CC12A8D9318FEF /* Pods-SkiApp */,
+				B986A076AACD93DEEB14747333CFA9E0 /* Pods-SkiApp-tvOS */,
+				CC9876951815BDDE87EA4C40EDFA05F7 /* Pods-SkiApp-tvOSTests */,
+				05B4073C8E8A07AE7FC4CFB703DCE041 /* Pods-SkiAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03AF776B41BC6E76A21A1E410F8CA92D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				08D33768753E30743E261D79666517F6 /* Pods-SkiAppTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		85F6A901627A2E686CCEB05DE299D3C7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAC85451CBB3CD71EEE6D1CFF34DD45D /* Pods-SkiApp-tvOS-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9C4B0200499F66BFEBBBA0525FE840D1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DDE11F90C20E493FA14EA5BCFBE0152 /* Pods-SkiApp-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7D65A0E5D394BFBD03CB0929AB71ED4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				53E390C536BFB676FC0FBEFBB9BEE0F9 /* Pods-SkiApp-tvOSTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		12C8D5DF9DD1E84EB2F2894ABFE76629 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 221D9E2D959172781887CCD4E437AD55 /* Pods-SkiApp-tvOS.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		282A9A5183558DD660B7C173E1AD44B6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Release;
+		};
+		4447A5EE2C7C59A523323A2CACAE83F7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64DAAF3DD4D858F6E89EAF1A94CC6BAA /* Pods-SkiAppTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		766E63929ABCE2AD9904B36403E1161F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 66C581A10681F250E0FC1653625C1E89 /* Pods-SkiApp.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		77164ACB3854EEFFDF6F382438BA628B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D96525D4E0F01EFB767C4777B4168DB /* Pods-SkiApp-tvOSTests.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		9D625C3752B9B2C9659751DEA05FE98B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SYMROOT = "${SRCROOT}/../build";
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		9F8569950C68907146DF294D1DBE25C4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5FDADEDD0800EEB990B037D7EE715F5A /* Pods-SkiApp-tvOS.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+			};
+			name = Debug;
+		};
+		AB9629367916603848F190115706A12F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6396629DFAF9EDB08E00B4294734F63E /* Pods-SkiAppTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C4EE2456F4D9337C570783B446FDD014 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D6093F91B44FAB1898454B696AE90404 /* Pods-SkiApp-tvOSTests.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 9.2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D3837C8C440B8E108CF31160438BF4F1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D95FE3B128AAD6770D8583F48875C710 /* Pods-SkiApp.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		12BAA209033644D335E00629F78A4110 /* Build configuration list for PBXNativeTarget "Pods-SkiAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4447A5EE2C7C59A523323A2CACAE83F7 /* Debug */,
+				AB9629367916603848F190115706A12F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9D625C3752B9B2C9659751DEA05FE98B /* Debug */,
+				282A9A5183558DD660B7C173E1AD44B6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2FBD4B76C9AB02694962F40C262C1384 /* Build configuration list for PBXNativeTarget "Pods-SkiApp-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9F8569950C68907146DF294D1DBE25C4 /* Debug */,
+				12C8D5DF9DD1E84EB2F2894ABFE76629 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B0314C64B586D299198AA289180C508 /* Build configuration list for PBXNativeTarget "Pods-SkiApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D3837C8C440B8E108CF31160438BF4F1 /* Debug */,
+				766E63929ABCE2AD9904B36403E1161F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AF769B865C65EA7C318F185D92ADFEA2 /* Build configuration list for PBXNativeTarget "Pods-SkiApp-tvOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77164ACB3854EEFFDF6F382438BA628B /* Debug */,
+				C4EE2456F4D9337C570783B446FDD014 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
