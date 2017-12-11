@@ -5,22 +5,26 @@ import FormNavigator        from './FormNavigator'
 import ImageCapture         from '../Screens/ImageCapture'
 import LineupForm           from '../Screens/LineupForm'
 import NewRace              from '../Screens/NewRace'
+import PositionSelector     from '../Screens/PositionSelector'
 
 const AppNavigator = StackNavigator({
-  FormNavigator: {
-    screen: FormNavigator
+  // FormNavigator: {
+  //   screen: FormNavigator
+  // },
+  NewRace: {
+    screen: NewRace
   },
-  // NewRace: {
-  //   screen: NewRace
-  // },
-  // LineupForm: {
-  //   screen: LineupForm
-  // },
+  PositionSelector: {
+    screen: PositionSelector
+  },
+  LineupForm: {
+    screen: LineupForm
+  },
   ImageCapture: {
     screen: ImageCapture,
-    navigationOptions: (props) => ({
-      title: "Image Capture",
-    })
+    // navigationOptions: (props) => ({
+    //   title: "Image Capture",
+    // })
   }
 }, {
   headerMode: 'none'

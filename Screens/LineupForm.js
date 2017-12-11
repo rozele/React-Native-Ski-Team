@@ -187,8 +187,8 @@ class LineupForm extends Component {
           <Row style={styles.titleRow}>
             <View>
               <Text style={styles.title}>
-                FORMVAR
-                        </Text>
+                {this.props.navigation.state.params.title}
+              </Text>
             </View>
           </Row>
           <Row>

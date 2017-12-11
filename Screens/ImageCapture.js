@@ -61,7 +61,7 @@ class ImageCapture extends Component {
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>&#128247</Text>
           <Text style={styles.capture} onPress={() =>
             navigate('ImageBrowser', { images: this.state.images })}
-          >
+            >
             Gal
           </Text>
         </Camera>

@@ -96,7 +96,9 @@ class NewRace extends Component {
   // Event Handlers
   // --------------------------------------------------
   _handleBtnPress() {
-    this.postDataToAzureFuncAsync()
+    // this.postDataToAzureFuncAsync()
+    const { navigate } = this.props.navigation
+    navigate('PositionSelector')
   }
 
   _handleSelection(idx, value, params) {
