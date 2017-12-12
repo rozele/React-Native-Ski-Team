@@ -49,7 +49,7 @@ class ImageCapture extends Component {
   }
 
   render() {
-    const { navigate } = this.props.navigation
+    const { goBack } = this.props.navigation
     return (
       <View style={styles.container}>
         <Camera
@@ -60,9 +60,9 @@ class ImageCapture extends Component {
           aspect={Camera.constants.Aspect.fill}>
           <Text style={styles.capture} onPress={this.takePicture.bind(this)}>&#128247</Text>
           <Text style={styles.capture} onPress={() =>
-            navigate('ImageBrowser', { images: this.state.images })}
+            goBack(null)}
             >
-            Gal
+            Back
           </Text>
         </Camera>
       </View>
