@@ -12,8 +12,13 @@ See this [Stack Overflow Post](https://stackoverflow.com/questions/44081674/reac
 ## Building for Android
 These are loose instructions for building on Android. 
 
-[Read here](https://facebook.github.io/react-native/releases/0.24/docs/android-setup.html) for instructions on setting up an Android emulator.
-
+### Setting up an Android Emulator
+1. [Download and install Java SE Development Kit 8.](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
+2. Set the ```JAVA_HOME``` environment variable to your jdk installation. The path should look something like ```C:\Program Files\Java\jdk1.8.0_151```.
+3. [Download and install Android Studio.](https://developer.android.com/studio/index.html)
+4. Open the Android SDK Manager (Configure->SDK Manager from the home screen or Tools->Android->SDK Manager from the editor.) On the bottom right of the Manager in the "SDK Platforms" tab, select "Show Package Details". Under Android 6.0 (Marshmallow) select Android SDK Platform 23, Sources for Android 23, and the appropriate Intel x86 Atom System Image for your system (or both if you aren't sure). Navigate to the SDK Tools tab and select Android Emulator, Android SDK Tools, and the Intel x86 Emulator Accelerator (HAXM installer). Click "OK" to install.
+5. Add the ```Android/Sdk/tools```, ```Android/Sdk/tools/bin```, and ```Android/Sdk/platform-tools``` directories to your system's PATH. 
+6. Open the Android Virtual Device (AVD) Manager (Tools->Android->AVD Manager from the editor.) Click "Create Virtual Device" and select the device you would like to emulate (Pixel XL recommended.) Click Next, then select Marshmallow from the list of system images. Click next, enter a name for your AVD if you would like one different from the default, then click Finish. Start the emulator by clicking the Play button under the Actions column.
 [Here you can find instructions](https://facebook.github.io/react-native/docs/running-on-device.html) for building and running on device over USB.
 
 *Note:* If on Windows, you may need to add Android tools and platform tools to your PATH in order to use utilities such as ```adb``` or ```avdmanager```. These tools are usually found in the ```Android/Sdk/tools```, ```Android/Sdk/tools/bin```, and ```Android/Sdk/platform-tools``` directories of your Android SDK installation directory.
