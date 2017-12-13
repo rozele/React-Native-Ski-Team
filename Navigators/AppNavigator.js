@@ -26,8 +26,10 @@ const AppNavigator = StackNavigator({
     //   title: "Image Capture",
     // })
   }
-}, {
-  headerMode: 'none'
-})
+}, 
+// {
+//   headerMode: 'none'
+// }
+)
 
 export default AppNavigator

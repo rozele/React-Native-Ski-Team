@@ -13,14 +13,18 @@ import {
 import styles from '../Styles/LineupFormStyles'
 
 class LineupForm extends Component {
+  static navigationOptions = ({ navigation }) => ({
+    title: `${navigation.state.params.title}`,
+  });
+  
   constructor(props) {
     super(props)
-
+    
     this.state = {
       nLane: [1, 2, 3, 4, 5, 6],
       bibCol: ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black']
     }
-
+    
     // Modal options
     this.bibOpt = ['Red', 'Green', 'Blue', 'White', 'Yellow', 'Black']
     this.laneOpt = [1, 2, 3, 4, 5, 6]
@@ -59,6 +63,8 @@ class LineupForm extends Component {
     var _sAzureFuncParams = this.createUrlToPost()
     var _sAzureUrl = this.sAzureUrl + _sAzureFuncParams
 
+    console.log('url:', _sAzureUrl)
+
     return fetch(_sAzureUrl)
       .then((response) => response.json())
       .then((responseJson) => {
@@ -87,6 +93,7 @@ class LineupForm extends Component {
   // --------------------------------------------------
   _handleBtnPress() {
     //this.postDataToAzureFuncAsync()
+    this.postDataToAzureFuncAsync()
     console.log(this.props)
   }
 

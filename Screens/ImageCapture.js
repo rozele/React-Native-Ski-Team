@@ -1,15 +1,10 @@
 import React, { Component } from 'react'
 import {
-  AppRegistry,
-  Dimensions,
   StyleSheet,
   Text,
-  TouchableHighlight,
   View,
-  Image
-}                           from 'react-native'
-import Camera               from 'react-native-camera'
-import styles               from '../Styles/ImageCaptureStyles'
+} from 'react-native'
+import Camera from 'react-native-camera'
 
 class ImageCapture extends Component {
   state = {
@@ -17,18 +12,11 @@ class ImageCapture extends Component {
   }
 
   static navigationOptions = {
-    tabBarLabel: 'Cam',
-    // tabBarIcon: ({ tintColor }) => (
-    //   <Image
-    //     source={require('../React-Native-Ski-Team/images/chat-icon.png')}
-    //     style={[styles.icon, { tintColor: tintColor }]}
-    //   />
-    // )
+    title: 'Camera'
   }
 
   takePicture() {
     const options = {}
-    //options.location = ...
     this.camera.capture({ metadata: options })
       .then((data) => {
         console.log('image captured')
@@ -36,12 +24,11 @@ class ImageCapture extends Component {
 
         this.setState({
           images: [...this.state.images,
-            {
-              key: this.state.images.length,
-              source: data.mediaUri,
-              //dimensions:  { width: 500, height: 500 }
-            }
-          ]
+                    {
+                      key: this.state.images.length,
+                      source: data.mediaUri,
+                    }
+                  ]
         })
         console.log('captured images:', this.state.images)
       })
@@ -58,16 +45,40 @@ class ImageCapture extends Component {
           }}
           style={styles.preview}
           aspect={Camera.constants.Aspect.fill}>
-          <Text style={styles.capture} onPress={this.takePicture.bind(this)}>&#128247</Text>
-          <Text style={styles.capture} onPress={() =>
+          <Text style={styles.capture} onPress={
+            this.takePicture.bind(this)}
+            >
+            Capture
+          </Text>
+          {/* <Text style={styles.capture} onPress={() =>
             goBack(null)}
             >
             Back
-          </Text>
+          </Text> */}
         </Camera>
       </View>
     )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'row',
+  },
+  preview: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    alignItems: 'center'
+  },
+  capture: {
+    flex: 0,
+    backgroundColor: '#fff',
+    borderRadius: 5,
+    color: '#000',
+    padding: 10,
+    margin: 40
+  }
+})
 
 export default ImageCapture
