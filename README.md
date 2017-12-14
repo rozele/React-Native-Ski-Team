@@ -34,7 +34,9 @@ This project requires node and npm. It is confirmed working on ```node v7.10.1``
 
 Build errors? Try running the commands in an administrative prompt. Otherwise, try navigating to the ```android``` app directory and running ```./gradlew clean```. If that doesn't work, open an issue with your error information.
 
-Connecting to the debugger with ```adb logcat *:S ReactNative:V ReactNativeJS:V```
+Connect to the debugger with ```adb logcat *:S ReactNative:V ReactNativeJS:V```
+
+Run ```adb shell input keyevent 82``` to open the in-app developer menu.
 
 --------------
 
