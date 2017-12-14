@@ -21,16 +21,7 @@ class ImageCapture extends Component {
       .then((data) => {
         console.log('image captured')
         console.log('data: ', data)
-
-        this.setState({
-          images: [...this.state.images,
-                    {
-                      key: this.state.images.length,
-                      source: data.mediaUri,
-                    }
-                  ]
-        })
-        console.log('captured images:', this.state.images)
+        this.props.navigation.state.params.setImages(data)
       })
       .catch(err => console.error(err))
   }
@@ -50,11 +41,6 @@ class ImageCapture extends Component {
             >
             Capture
           </Text>
-          {/* <Text style={styles.capture} onPress={() =>
-            goBack(null)}
-            >
-            Back
-          </Text> */}
         </Camera>
       </View>
     )

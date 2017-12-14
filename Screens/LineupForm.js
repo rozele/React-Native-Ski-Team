@@ -1,12 +1,15 @@
 import React, { Component } from 'react'
 import {
   Button,
+  Dimensions,
   Picker,
   StyleSheet,
   Text,
   View,
   Image,
 } from 'react-native'
+
+const { width, height } = Dimensions.get('window')
 
 class LineupForm extends Component {
   static navigationOptions = ({ navigation }) => ({
@@ -35,18 +38,48 @@ class LineupForm extends Component {
     }
   }
 
+  setImages = (data) => {
+    this.setState({
+      images:
+        [...this.state.images,
+          {
+            source: data.mediaUri
+          }
+        ]
+      })
+    console.log(this.state.images)
+  }
+
+  renderImages() {
+    if (this.state.images.length < 1) {
+      return (
+        <Text style={styles.imageText}>
+          Use the camera to capture images
+        </Text>
+      )
+    } 
+    else {
+      return (
+        <View style={styles.imageGallery}>
+          <Image
+            style={styles.image}
+            source={{uri: this.state.images[0].source}}
+          />
+        </View>
+      )
+    }
+  }
+
   render() {
     const { navigate } = this.props.navigation
     return (
       <View style={styles.container}>
         <View style={styles.imageView}>
-          <Text style={styles.imageText}>
-            Use the camera to capture images
-          </Text>
+          {this.renderImages()}
         </View>
         <Button
           onPress={() =>
-            navigate('ImageCapture')
+            navigate('ImageCapture', { setImages: this.setImages })
           }
           style={styles.button}
           title='Camera'
@@ -94,8 +127,10 @@ class LineupForm extends Component {
           />
         </View>
         <Button
-          onPress={() =>
-            console.log(this.state)
+          onPress={() => {
+              console.log(this.state)
+              this.state.images = []
+            }
           }
           style={styles.button}
           title='Submit'
@@ -116,16 +151,24 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
   },
-  imageView: {
-    flex: 5,
-    flexDirection: 'row',
-    justifyContent: 'center',
-    alignItems: 'center',
+  image: {
+    width: width,
+    height: height / 3,
+  },
+  imageGallery: {
+    flex: 1,
+    backgroundColor: 'white'
   },
   imageText: {
     flex: 1,
     fontSize: 20,
     textAlign: 'center',
+  },
+  imageView: {
+    flex: 5,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
   },
   text: {
     flex: 1,
