@@ -1,3 +1,3 @@
 import { AppRegistry } from 'react-native';
-import CameraNavigator from './Navigators/CameraNavigator';
-AppRegistry.registerComponent('SkiApp', () => CameraNavigator);
+import AppNavigator from './Navigators/AppNavigator';
+AppRegistry.registerComponent('SkiApp', () => AppNavigator);
