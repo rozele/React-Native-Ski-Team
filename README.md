@@ -33,7 +33,7 @@ These are loose instructions for building on Android.
 8. Run ```react-native log-android``` to connect display console logs.
 
 Run ```adb shell input keyevent 82``` to open the in-app developer menu if you would like to enable hot/live reloading.
-
+If you are debugging over USB, use ```adb reverse tcp:8081 tcp:8081``` to connect to the development server.
 --------------
 
 
