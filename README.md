@@ -21,22 +21,18 @@ These are loose instructions for building on Android.
 6. Open the Android Virtual Device (AVD) Manager (Tools->Android->AVD Manager from the editor.) Click "Create Virtual Device" and select the device you would like to emulate (Pixel XL recommended.) Click Next, then select Marshmallow from the list of system images. Click next, enter a name for your AVD if you would like one different from the default, then click Finish. Start the emulator by clicking the Play button under the Actions column.
 [Here you can find instructions](https://facebook.github.io/react-native/docs/running-on-device.html) for building and running on device over USB.
 
-*Note:* If on Windows, you may need to add Android tools and platform tools to your PATH in order to use utilities such as ```adb``` or ```avdmanager```. These tools are usually found in the ```Android/Sdk/tools```, ```Android/Sdk/tools/bin```, and ```Android/Sdk/platform-tools``` directories of your Android SDK installation directory.
-
-This project requires node and npm. It is confirmed working on ```node v7.10.1``` and ```npm 4.2.0```.
 
 ### Installing node dependencies and building on your device
-- Install the react native command line with ```npm i -g react-native-cli```.
-- Install project dependencies by navigating to the project directory and running ```npm i```.
-- Create the Android build directory with ```react-native eject```.
-- Link native libraries with ```react-native-link```.
-- Build and run the app on your connected Android device with ```react-native run-android```.
+1. This project requires node and npm. It is confirmed working on ```node v7.10.1``` and ```npm 4.2.0```. You can find them [here](https://nodejs.org/en/download/).
+2. Install [react-native-cli](https://www.npmjs.com/package/react-native-cli) with ```npm i -g react-native-cli```.
+3. Run ```npm i``` in the project directory to install the required node packages.
+4. Run ```react-native eject``` to build the Android project. 
+5. Run ```react-native link``` to link native libraries. 
+6. Run ```react-native start``` to start the React packager.
+7. In a new terminal, run ```react-native run-android``` to build and install the app on your Android device.
+8. Run ```react-native log-android``` to connect display console logs.
 
-Build errors? Try running the commands in an administrative prompt. Otherwise, try navigating to the ```android``` app directory and running ```./gradlew clean```. If that doesn't work, open an issue with your error information.
-
-Connect to the debugger with ```adb logcat *:S ReactNative:V ReactNativeJS:V```
-
-Run ```adb shell input keyevent 82``` to open the in-app developer menu.
+Run ```adb shell input keyevent 82``` to open the in-app developer menu if you would like to enable hot/live reloading.
 
 --------------
 
